@@ -58,6 +58,15 @@ public class TransactionController {
         return Msg.success().add("transactions", transactions);
     }
     /**
+     * 根据sellerId查询
+     */
+    @RequestMapping(value = "/tranBySeller", method = RequestMethod.GET)
+    @ResponseBody
+    public Msg getBySeller(Integer sellerid) {
+        List<Transaction> transactions = transactionService.getBySeller(sellerid);
+        return Msg.success().add("transactions", transactions);
+    }
+    /**
      * 根据tranId修改更新
      */
     @RequestMapping(value = "/tranSts", method = RequestMethod.PUT)

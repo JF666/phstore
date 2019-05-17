@@ -24,6 +24,8 @@ public interface TransactionMapper {
 
     List<Transaction> selectByPrimaryKey(Integer buyerid);
 
+    List<Transaction> selectBySeller(Integer sellerid);
+
     int updateByExampleSelective(@Param("record") Transaction record, @Param("example") TransactionExample example);
 
     int updateByExample(@Param("record") Transaction record, @Param("example") TransactionExample example);

@@ -23,7 +23,10 @@ public class TransactionService {
         List<Transaction> transactions = transactionMapper.selectByPrimaryKey(buyerid);
         return transactions;
     }
-
+    public List<Transaction> getBySeller(Integer sellerid) {
+        List<Transaction> transactions = transactionMapper.selectBySeller(sellerid);
+        return transactions;
+    }
     public Boolean insertTransaction(Transaction transaction) {
         return transactionMapper.insertSelective(transaction)!=0;
     }

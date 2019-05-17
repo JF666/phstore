@@ -163,6 +163,13 @@
     left join product p on t.proId = p.proId
     where buyerId = #{buyerid,jdbcType=INTEGER}
   </select>
+  <select id="selectBySeller" parameterType="java.lang.Integer" resultMap="WithProResultMap">
+    select
+    <include refid="WithPro_Column_List" />
+    from transaction t
+    left join product p on t.proId = p.proId
+    where sellerId = #{sellerid,jdbcType=INTEGER}
+  </select>
   <select id="selectByPrimaryKeyWithProSeller" parameterType="java.lang.String" resultMap="WithProSellerResultMap">
     select
     <include refid="WithProSeller_Column_List" />
