@@ -1,9 +1,24 @@
 var str,company,userid;
 var sellerId = localStorage.getItem("sellerId");
+var user=localStorage.getItem("username");
 $(function () {
     var url = location.search;
     if (url.indexOf("?") !== -1) {
         str = decodeURI(url.substr(1).split("=")[1]);
+    }
+    if (user!=null){
+        $(".user").css("display", "block");
+        $("#J_userInfo").css("display", "none");
+        $(".name").text(user);
+        $(".user").hover(function () {
+            $(".user-menu").css("display", "block");
+            $(".user-name").css("background", "#fff")
+                .css("color", "#000");
+        },function () {
+            $(".user-name").css("background", "#333")
+                .css("color", "#b0b0b0");
+            $(".user-menu").css("display", "none");
+        });
     }
     if (sellerId === "") {
         addPer();
@@ -24,6 +39,7 @@ function toPerson() {
     $(".order").css("display", "none");
     $(".comment").css("display", "none");
     $(".addComment").css("display", "none");
+    $(".modifyComment").css("display", "none");
     getPerson();
 }
 function getPerson() {
@@ -70,6 +86,7 @@ function cancelMod() {
     $(".order").css("display", "none");
     $(".comment").css("display", "none");
     $(".addComment").css("display", "none");
+    $(".modifyComment").css("display", "none");
     $(".list ul").find("li").eq(0).children().attr("onclick", "toPerson()");
     $(".list ul").find("li").eq(1).children().attr("onclick", "toPro()");
     $(".list ul").find("li").eq(2).children().attr("onclick", "toOrder()");
@@ -125,6 +142,7 @@ function disClick() {
     $(".order").css("display", "none");
     $(".comment").css("display", "none");
     $(".addComment").css("display", "none");
+    $(".modifyComment").css("display", "none");
     $(".list ul li a").removeAttr("onclick");
     $(".user-menu li a").removeAttr("onclick");
 }
@@ -138,6 +156,7 @@ function toPro() {
     $(".order").css("display", "none");
     $(".comment").css("display", "none");
     $(".addComment").css("display", "none");
+    $(".modifyComment").css("display", "none");
     getPro();
 }
 function getPro() {
@@ -150,7 +169,8 @@ function getPro() {
             if (data.length === 0){
                 $(".Pro").empty();
                 $(".Pro").append($("<div></div>").addClass("emptyOrder")
-                    .append($("<h2>尚未卖出商品！</h2>"))
+                    .append($("<h2>尚未添加商品！</h2>"))
+                    .append($("<a></a>").text("马上去添加").attr("onclick", "addPro()").attr("class", "btn btn-shop btn-shop1"))
                 );
             } else {
                 for (i in data) {
@@ -172,8 +192,8 @@ function getPro() {
                     var price = data[i].price;
                     var proId = data[i].proId;
                     var proIntro = data[i].proIntro;
-                    var proname = data[i].product.proname;
-                    var version = data[i].product.version;
+                    var proname = data[i].proname;
+                    var version = data[i].version;
                     // $(".Pro").append($("<div></div>").addClass("orderList").attr("proid", proid)
                     //     .append($("<img>").attr("src", pic).attr("alt", proname))
                     //     .append($("<p></p>").append($("<a></a>")
@@ -194,15 +214,17 @@ function toOrder() {
     $(".person").css("display", "none");
     $(".addPerson").css("display", "none");
     $(".modifyPerson").css("display", "none");
+    $(".Pro").css("display", "none");
     $(".order").css("display", "block");
     $(".comment").css("display", "none");
     $(".addComment").css("display", "none");
+    $(".modifyComment").css("display", "none");
 }
 function getOrder() {
     $.ajax({
-        url: "http://localhost:8080/phstore_war_exploded/tranByBuyer",
+        url: "http://localhost:8080/phstore_war_exploded/tranBySeller",
         data: {
-            buyerid: buyerId
+            sellerid: sellerId
         },
         type: "GET",
         success: function (response) {
@@ -210,8 +232,8 @@ function getOrder() {
             if (data.length === 0){
                 $(".order").empty();
                 $(".order").append($("<div></div>").addClass("emptyOrder")
-                    .append($("<h2>尚未购买商品！</h2>"))
-                    .append($("<a></a>").text("马上去购物").attr("href", "index.html").attr("class", "btn btn-shop btn-shop1")));
+                    .append($("<h2>尚未售出商品！</h2>"))
+                );
             } else {
                 for (i in data) {
                     var acprice = data[i].acprice;
@@ -222,11 +244,17 @@ function getOrder() {
                     var proid = data[i].proid;
                     var proname = data[i].product.proname;
                     var version = data[i].product.version;
+                    var realname = data[i].buyer.realname;
+                    var phonenum = data[i].buyer.phonenum;
+                    var address = data[i].buyer.receiveadd;
                     $(".order").append($("<div></div>").addClass("orderList").attr("proid", proid)
+                        .append($("<h4>买家收货信息</h4>"))
+                        .append($("<p></p>").text("收货人："+realname))
+                        .append($("<p></p>").text("电话号码："+phonenum))
+                        .append($("<p></p>").text("收货地址："+address))
+                        .append($("<br>"))
                         .append($("<img>").attr("src", pic).attr("alt", proname))
-                        .append($("<p></p>").append($("<a></a>")
-                            .text(proname + " " + version + " " + color)
-                            .attr("href", "detail.html?name=" + proname)))
+                        .append($("<p></p>").append($("<a></a>").text(proname + " " + version + " " + color)))
                         .append($("<label><label/>").text(acprice + "元×" + amount))
                         .append($("<span><span/>").text(createtime))
                     );
@@ -238,9 +266,9 @@ function getOrder() {
 }
 function getComment() {
     $.ajax({
-        url: "http://localhost:8080/phstore_war_exploded/tranByBuyer",
+        url: "http://localhost:8080/phstore_war_exploded/tranBySeller",
         data: {
-            buyerid: buyerId
+            sellerid: sellerId
         },
         type: "GET",
         success: function (response) {
@@ -248,8 +276,8 @@ function getComment() {
             if (data.length === 0){
                 $(".comment").empty();
                 $(".comment").append($("<div></div>").addClass("emptyOrder")
-                    .append($("<h2>尚未购买商品！</h2>"))
-                    .append($("<a></a>").text("马上去购物").attr("href", "index.html").attr("class", "btn btn-shop btn-shop1")));
+                    .append($("<h2>尚未售出商品！</h2>"))
+                );
             } else {
                 var pros = [];
                 for (i in data) {
@@ -257,47 +285,55 @@ function getComment() {
                     var color = data[i].color;
                     var pic = data[i].pic;
                     var proid = data[i].product.proId;
-                    var sellerid = data[i].sellerid;
+                    var buyerid = data[i].buyer.buyerid;
                     var proname = data[i].product.proname;
                     var version = data[i].product.version;
                     if (pros.indexOf(proid) === -1) {
                         pros.push(proid);
-                        $(".comment").append($("<div></div>").addClass("orderList comList").attr("sellerid", sellerid)
+                        $(".comment").append($("<div></div>").addClass("orderList comList").attr("buyerid", buyerid)
                             .append($("<img>").attr("src", pic).attr("alt", proname))
-                            .append($("<p></p>").append($("<a></a>")
-                                .text(proname + " " + version + " " + color)
-                                .attr("href", "detail.html?name=" + proname)))
+                            .append($("<p></p>").append($("<a></a>").text(proname + " " + version + " " + color)))
                             .append($("<label><label/>").text(acprice + "元"))
                         );
                     }
                 }
                 for (i in pros) {
                     $.ajax({
-                        url: "http://localhost:8080/phstore_war_exploded/comment/" + pros[i],
-                        data: {},
+                        url: "http://localhost:8080/phstore_war_exploded/commentBySellerId",
+                        data: {
+                            sellerid: sellerId,
+                            proid: pros[i]
+                        },
                         type: "GET",
                         async: false,
                         success: function (response) {
                             var data = response.extend.comment;
-                            if (data.length === 0) {
-                                $(".comment").find("div").eq(i).append($("<a>评价</a>")
-                                    .attr("onclick", "addComm(this)")
-                                    .attr("proid", pros[i])
-                                    .attr("class", "btn btn-shop btn-shop1 btn-comm"));
+                            var comminfo = data.comminfo;
+                            var commid = data.commid;
+                            if (data.apply === "") {
+                                $(".comment").find("div").eq(i)
+                                    .append($("<a>回复</a>")
+                                        .attr("onclick", "addComm(this)")
+                                        .attr("proid", pros[i])
+                                        .attr("comminfo", comminfo)
+                                        .attr("commid", commid)
+                                        .attr("class", "btn btn-shop btn-shop1 btn-comm"))
+                                    .append($("<br>"))
+                                    .append($("<h4>评价详情</h4>"))
+                                    .append($("<span></span>").text("买家评价："+comminfo));
                             } else {
-                                if (data[0].apply === "") {
-                                    $(".comment").find("div").eq(i)
-                                        .append($("<br>"))
-                                        .append($("<h4>评价详情</h4>"))
-                                        .append($("<span></span>").text("买家评价："+data[0].comminfo));
-                                } else {
-                                    $(".comment").find("div").eq(i)
-                                        .append($("<br>"))
-                                        .append($("<h4>评价详情</h4>"))
-                                        .append($("<span></span>").text("买家评价："+data[0].comminfo))
-                                        .append($("<br>"))
-                                        .append($("<span></span>").text("卖家回复："+data[0].apply));
-                                }
+                                $(".comment").find("div").eq(i)
+                                    .append($("<a>修改</a>")
+                                        .attr("onclick", "modifyComm(this)")
+                                        .attr("proid", pros[i])
+                                        .attr("comminfo", comminfo)
+                                        .attr("commid", commid)
+                                        .attr("class", "btn btn-shop btn-shop1 btn-comm"))
+                                    .append($("<br>"))
+                                    .append($("<h4>评价详情</h4>"))
+                                    .append($("<span></span>").text("买家评价："+comminfo))
+                                    .append($("<br>"))
+                                    .append($("<span></span>").text("卖家回复："+data.apply));
                             }
                         }, error: function () {
                         }
@@ -305,13 +341,23 @@ function getComment() {
                 }
             }
             $("#commentContent").focus(function () {
-                if ($("#commentContent").val() === "外形如何，品质如何，好用吗，写点您真实的使用感受吧") {
+                if ($("#commentContent").val() === "写点感谢客户的话吧") {
                     $("#commentContent").val("");
                 }
             });
             $("#commentContent").blur(function () {
                 if ($("#commentContent").val() === "") {
-                    $("#commentContent").val("外形如何，品质如何，好用吗，写点您真实的使用感受吧");
+                    $("#commentContent").val("写点感谢客户的话吧");
+                }
+            });
+            $("#commentContent1").focus(function () {
+                if ($("#commentContent1").val() === "写点感谢客户的话吧") {
+                    $("#commentContent1").val("");
+                }
+            });
+            $("#commentContent1").blur(function () {
+                if ($("#commentContent1").val() === "") {
+                    $("#commentContent1").val("写点感谢客户的话吧");
                 }
             });
         }, error: function () {
@@ -324,48 +370,83 @@ function toComment() {
     $(".person").css("display", "none");
     $(".addPerson").css("display", "none");
     $(".modifyPerson").css("display", "none");
+    $(".Pro").css("display", "none");
     $(".order").css("display", "none");
     $(".comment").css("display", "block");
     $(".addComment").css("display", "none");
+    $(".modifyComment").css("display", "none");
 }
 function addComm(obj) {
     $(".person").css("display", "none");
     $(".addPerson").css("display", "none");
     $(".modifyPerson").css("display", "none");
+    $(".Pro").css("display", "none");
     $(".order").css("display", "none");
     $(".comment").css("display", "none");
     $(".addComment").css("display", "block");
+    $(".modifyComment").css("display", "none");
     $(".list ul li a").removeAttr("onclick");
     $(".user-menu li a").removeAttr("onclick");
     var proid = $(obj).attr("proid");
-    var sellerid = $(obj).parent().attr("sellerid");
+    var comminfo = $(obj).attr("comminfo");
+    var commid = $(obj).attr("commid");
+    var buyerid = $(obj).parent().attr("buyerid");
     var pic = $(obj).parent().children().first().attr("src");
     var proname = $(obj).parent().children().first().attr("alt");
     var name = $(obj).prev().prev().children().text();
     var acprice = $(obj).prev().text();
     $(".commentPro").empty();
     $(".commentPro").append($("<div></div>").addClass("addComm")
-        .attr("proid", proid).attr("sellerid", sellerid)
+        .attr("proid", proid).attr("buyerid", buyerid).attr("comminfo", comminfo).attr("commid", commid)
+        .append($("<img>").attr("src", pic).attr("alt", proname))
+        .append($("<p></p>").text(name))
+        .append($("<span><span/>").text(acprice))
+    );
+}
+function modifyComm(obj) {
+    $(".person").css("display", "none");
+    $(".addPerson").css("display", "none");
+    $(".modifyPerson").css("display", "none");
+    $(".Pro").css("display", "none");
+    $(".order").css("display", "none");
+    $(".comment").css("display", "none");
+    $(".addComment").css("display", "none");
+    $(".modifyComment").css("display", "block");
+    $(".list ul li a").removeAttr("onclick");
+    $(".user-menu li a").removeAttr("onclick");
+    var proid = $(obj).attr("proid");
+    var comminfo = $(obj).attr("comminfo");
+    var commid = $(obj).attr("commid");
+    var buyerid = $(obj).parent().attr("buyerid");
+    var pic = $(obj).parent().children().first().attr("src");
+    var proname = $(obj).parent().children().first().attr("alt");
+    var name = $(obj).prev().prev().children().text();
+    var acprice = $(obj).prev().text();
+    $(".commentPro").empty();
+    $(".commentPro").append($("<div></div>").addClass("addComm")
+        .attr("proid", proid).attr("buyerid", buyerid).attr("comminfo", comminfo).attr("commid", commid)
         .append($("<img>").attr("src", pic).attr("alt", proname))
         .append($("<p></p>").text(name))
         .append($("<span><span/>").text(acprice))
     );
 }
 function saveComm(obj) {
-    var commInfo = $(obj).parent().prev().val();
+    var apply = $(obj).parent().prev().val();
     var proid = $(obj).parent().parent().prev().children().attr("proid");
-    var sellerid = $(obj).parent().parent().prev().children().attr("sellerid");
+    var buyerid = $(obj).parent().parent().prev().children().attr("buyerid");
+    var commInfo = $(obj).parent().parent().prev().children().attr("comminfo");
+    var commid = $(obj).parent().parent().prev().children().attr("commid");
     $.ajax({
-        url: "http://localhost:8080/phstore_war_exploded/commentInsert",
+        url: "http://localhost:8080/phstore_war_exploded/comment/"+commid,
         data: {
-            buyerid: buyerId,
-            sellerid: sellerid,
+            buyerid: buyerid,
+            sellerid: sellerId,
             comminfo: commInfo,
-            apply: "",
+            apply: apply,
             commsts: 0,
             proid: proid
         },
-        type: "POST",
+        type: "PUT",
         success: function () {
             $(".comment").empty();
             $(".comment").append($("<h1>评价晒单</h1>"));
@@ -379,14 +460,23 @@ function cancelComm() {
     $(".person").css("display", "none");
     $(".modifyPerson").css("display", "none");
     $(".addPerson").css("display", "none");
+    $(".Pro").css("display", "none");
     $(".order").css("display", "none");
     $(".comment").css("display", "block");
     $(".addComment").css("display", "none");
+    $(".modifyComment").css("display", "none");
     $(".list ul").children().first().children().attr("onclick", "toPerson()");
-    $(".list ul").find("li").eq(1).children().attr("onclick", "toOrder()");
+    $(".list ul").find("li").eq(1).children().attr("onclick", "toPro()");
+    $(".list ul").find("li").eq(2).children().attr("onclick", "toOrder()");
     $(".list ul").children().last().children().attr("onclick", "toComment()");
     $(".user-menu").find("li").eq(0).children().attr("onclick", "toPerson()");
-    $(".user-menu").find("li").eq(1).children().attr("onclick", "toOrder()");
-    $(".user-menu").find("li").eq(2).children().attr("onclick", "toComment()");
-    $(".user-menu").find("li").eq(3).children().attr("onclick", "quit();return false;");
+    $(".user-menu").find("li").eq(1).children().attr("onclick", "toPro()");
+    $(".user-menu").find("li").eq(2).children().attr("onclick", "toOrder()");
+    $(".user-menu").find("li").eq(3).children().attr("onclick", "toComment()");
+    $(".user-menu").find("li").eq(4).children().attr("onclick", "quit();return false;");
+}
+function quit() {
+    window.location.href = "login.html";
+    localStorage.removeItem("username");
+    localStorage.removeItem("sellerId");
 }

@@ -150,6 +150,7 @@ function quit() {
     $(".user").append(li1);
     window.location.href = "index.html";
     localStorage.removeItem("username");
+    localStorage.removeItem("buyerId");
 }
 function over(obj) {
     $.ajax({

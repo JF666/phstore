@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Access-Control-Allow-Origin" content="*">
     <script type="text/javaScript" src="js/jquery-3.4.1.js"></script>
-    <script type="text/javaScript" src="js/jquery-3.4.1.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/seller.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
     <link rel="stylesheet" href="css/index.css" />
@@ -108,6 +106,20 @@
                                 <div class="comment-answer-btn">
                                     <button class="btn btn-primary" onclick="saveComm(this)">发表评价</button>
                                     <button class="btn btn-default" onclick="cancelComm()">暂不评价</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modifyComment">
+                        <h1>修改回复</h1>
+                        <div class="row clearfix">
+                            <div class="col-md-4 column commentPro">
+                            </div>
+                            <div class="col-md-8 column commentInfo">
+                                <textarea id="commentContent1" name="" class="goods-comment-content">写点感谢客户的话吧</textarea>
+                                <div class="comment-answer-btn">
+                                    <button class="btn btn-primary" onclick="saveComm(this)">保存</button>
+                                    <button class="btn btn-default" onclick="cancelComm()">取消</button>
                                 </div>
                             </div>
                         </div>

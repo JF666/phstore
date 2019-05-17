@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class CommentService {
@@ -18,12 +19,12 @@ public class CommentService {
     public Boolean insertComment(Comment comment) {
         return commentMapper.insertSelective(comment)!=0;
     }
-    public List<Comment> getByProId(Integer proid) {
-        List<Comment> comment = commentMapper.selectByPrimaryKeyProId(proid);
+    public Comment getByBuyerId(Map<String, Object> params) {
+        Comment comment = commentMapper.selectByBuyerId(params);
         return comment;
     }
-    public List<Comment> getByBuyerId(Integer buyerid) {
-        List<Comment> comment = commentMapper.selectByBuyerId(buyerid);
+    public Comment getBySellerId(Map<String, Object> params) {
+        Comment comment = commentMapper.selectBySellerId(params);
         return comment;
     }
     public void UpdateComment(Comment comment) {

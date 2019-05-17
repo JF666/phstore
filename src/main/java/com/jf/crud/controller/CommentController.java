@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @CrossOrigin(origins = "*", maxAge = 3600)
@@ -44,19 +46,25 @@ public class CommentController {
     /**
      * 根据proId查询
      */
-    @RequestMapping(value = "/comment/{proid}", method = RequestMethod.GET)
+    @RequestMapping(value = "/commentByBuyerId", method = RequestMethod.GET)
     @ResponseBody
-    public Msg getByProId(@PathVariable("proid")Integer proid) {
-        List<Comment> comment = commentService.getByProId(proid);
+    public Msg getByBuyerId(Integer buyerid, Integer proid) {
+        Map<String, Object> params = new HashMap<>();
+        params.put("buyerid", buyerid);
+        params.put("proid", proid);
+        Comment comment = commentService.getByBuyerId(params);
         return Msg.success().add("comment", comment);
     }
     /**
      * 根据proId查询
      */
-    @RequestMapping(value = "/commentByBuyerId/{buyerid}", method = RequestMethod.GET)
+    @RequestMapping(value = "/commentBySellerId", method = RequestMethod.GET)
     @ResponseBody
-    public Msg getByBuyerId(@PathVariable("buyerid")Integer buyerid) {
-        List<Comment> comment = commentService.getByBuyerId(buyerid);
+    public Msg getBySellerId(Integer sellerid, Integer proid) {
+        Map<String, Object> params = new HashMap<>();
+        params.put("sellerid", sellerid);
+        params.put("proid", proid);
+        Comment comment = commentService.getBySellerId(params);
         return Msg.success().add("comment", comment);
     }
     /**

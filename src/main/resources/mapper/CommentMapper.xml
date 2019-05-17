@@ -106,17 +106,19 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKeyProId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  <select id="selectBySellerId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
     from comment
     where proId = #{proid,jdbcType=INTEGER}
+    and sellerId = #{sellerid,jdbcType=INTEGER}
   </select>
-  <select id="selectByBuyerId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  <select id="selectByBuyerId" parameterType="java.util.HashMap" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
     from comment
     where buyerId = #{buyerid,jdbcType=INTEGER}
+    and proId = #{proid,jdbcType=INTEGER}
   </select>
 
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">

@@ -1108,7 +1108,7 @@ h3 {
 .modifyPerson,.addPerson {
     display: none;
 }
-.addComment {
+.addComment,.modifyComment {
     display: none;
 }
 .modifyInfo,.AddInfo {
@@ -1219,7 +1219,7 @@ h3 {
     margin-top: 10px;
     margin-left: 10px;
 }
-.comList h4 {
+.comList h4,.orderList h4 {
     font-size: 18px;
     color: #333333;
     padding: 10px 0;

@@ -3,6 +3,8 @@ package com.jf.crud.dao;
 import com.jf.crud.bean.Comment;
 import com.jf.crud.bean.CommentExample;
 import java.util.List;
+import java.util.Map;
+
 import org.apache.ibatis.annotations.Param;
 
 public interface CommentMapper {
@@ -20,9 +22,9 @@ public interface CommentMapper {
 
     Comment selectByPrimaryKey(Integer commid);
 
-    List<Comment> selectByPrimaryKeyProId(Integer proid);
+    Comment selectByBuyerId(Map<String, Object> params);
 
-    List<Comment> selectByBuyerId(Integer buyerid);
+    Comment selectBySellerId(Map<String, Object> params);
 
     int updateByExampleSelective(@Param("record") Comment record, @Param("example") CommentExample example);
 
