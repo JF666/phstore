@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jf.crud.dao.RamromMapper">
+  <resultMap id="BaseResultMap" type="com.jf.crud.bean.Ramrom">
+    <id column="rmId" jdbcType="INTEGER" property="rmid" />
+    <result column="ram" jdbcType="VARCHAR" property="ram" />
+    <result column="rom" jdbcType="VARCHAR" property="rom" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    rmId, ram, rom
+  </sql>
+  <select id="selectByExample" parameterType="com.jf.crud.bean.RamromExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from ramrom
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ramrom
+    where rmId = #{rmid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from ramrom
+    where rmId = #{rmid,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.jf.crud.bean.RamromExample">
+    delete from ramrom
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.jf.crud.bean.Ramrom">
+    insert into ramrom (rmId, ram, rom
+      )
+    values (#{rmid,jdbcType=INTEGER}, #{ram,jdbcType=VARCHAR}, #{rom,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.jf.crud.bean.Ramrom">
+    insert into ramrom
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="rmid != null">
+        rmId,
+      </if>
+      <if test="ram != null">
+        ram,
+      </if>
+      <if test="rom != null">
+        rom,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="rmid != null">
+        #{rmid,jdbcType=INTEGER},
+      </if>
+      <if test="ram != null">
+        #{ram,jdbcType=VARCHAR},
+      </if>
+      <if test="rom != null">
+        #{rom,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.jf.crud.bean.RamromExample" resultType="java.lang.Long">
+    select count(*) from ramrom
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update ramrom
+    <set>
+      <if test="record.rmid != null">
+        rmId = #{record.rmid,jdbcType=INTEGER},
+      </if>
+      <if test="record.ram != null">
+        ram = #{record.ram,jdbcType=VARCHAR},
+      </if>
+      <if test="record.rom != null">
+        rom = #{record.rom,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update ramrom
+    set rmId = #{record.rmid,jdbcType=INTEGER},
+      ram = #{record.ram,jdbcType=VARCHAR},
+      rom = #{record.rom,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.jf.crud.bean.Ramrom">
+    update ramrom
+    <set>
+      <if test="ram != null">
+        ram = #{ram,jdbcType=VARCHAR},
+      </if>
+      <if test="rom != null">
+        rom = #{rom,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where rmId = #{rmid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.jf.crud.bean.Ramrom">
+    update ramrom
+    set ram = #{ram,jdbcType=VARCHAR},
+      rom = #{rom,jdbcType=VARCHAR}
+    where rmId = #{rmid,jdbcType=INTEGER}
+  </update>
+</mapper>

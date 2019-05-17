@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="jf.dao.CpuinfoMapper">
+  <resultMap id="BaseResultMap" type="jf.bean.Cpuinfo">
+    <id column="cpuId" jdbcType="INTEGER" property="cpuid" />
+    <result column="cpuName" jdbcType="VARCHAR" property="cpuname" />
+    <result column="cpuTech" jdbcType="VARCHAR" property="cputech" />
+    <result column="cpuFqu" jdbcType="VARCHAR" property="cpufqu" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    cpuId, cpuName, cpuTech, cpuFqu
+  </sql>
+  <select id="selectByExample" parameterType="jf.bean.CpuinfoExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from cpuinfo
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from cpuinfo
+    where cpuId = #{cpuid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from cpuinfo
+    where cpuId = #{cpuid,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="jf.bean.CpuinfoExample">
+    delete from cpuinfo
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="jf.bean.Cpuinfo">
+    insert into cpuinfo (cpuId, cpuName, cpuTech, 
+      cpuFqu)
+    values (#{cpuid,jdbcType=INTEGER}, #{cpuname,jdbcType=VARCHAR}, #{cputech,jdbcType=VARCHAR}, 
+      #{cpufqu,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="jf.bean.Cpuinfo">
+    insert into cpuinfo
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="cpuid != null">
+        cpuId,
+      </if>
+      <if test="cpuname != null">
+        cpuName,
+      </if>
+      <if test="cputech != null">
+        cpuTech,
+      </if>
+      <if test="cpufqu != null">
+        cpuFqu,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="cpuid != null">
+        #{cpuid,jdbcType=INTEGER},
+      </if>
+      <if test="cpuname != null">
+        #{cpuname,jdbcType=VARCHAR},
+      </if>
+      <if test="cputech != null">
+        #{cputech,jdbcType=VARCHAR},
+      </if>
+      <if test="cpufqu != null">
+        #{cpufqu,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="jf.bean.CpuinfoExample" resultType="java.lang.Long">
+    select count(*) from cpuinfo
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update cpuinfo
+    <set>
+      <if test="record.cpuid != null">
+        cpuId = #{record.cpuid,jdbcType=INTEGER},
+      </if>
+      <if test="record.cpuname != null">
+        cpuName = #{record.cpuname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cputech != null">
+        cpuTech = #{record.cputech,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cpufqu != null">
+        cpuFqu = #{record.cpufqu,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update cpuinfo
+    set cpuId = #{record.cpuid,jdbcType=INTEGER},
+      cpuName = #{record.cpuname,jdbcType=VARCHAR},
+      cpuTech = #{record.cputech,jdbcType=VARCHAR},
+      cpuFqu = #{record.cpufqu,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="jf.bean.Cpuinfo">
+    update cpuinfo
+    <set>
+      <if test="cpuname != null">
+        cpuName = #{cpuname,jdbcType=VARCHAR},
+      </if>
+      <if test="cputech != null">
+        cpuTech = #{cputech,jdbcType=VARCHAR},
+      </if>
+      <if test="cpufqu != null">
+        cpuFqu = #{cpufqu,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where cpuId = #{cpuid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="jf.bean.Cpuinfo">
+    update cpuinfo
+    set cpuName = #{cpuname,jdbcType=VARCHAR},
+      cpuTech = #{cputech,jdbcType=VARCHAR},
+      cpuFqu = #{cpufqu,jdbcType=VARCHAR}
+    where cpuId = #{cpuid,jdbcType=INTEGER}
+  </update>
+</mapper>

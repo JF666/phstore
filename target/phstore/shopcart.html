@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>手机商城</title>
+    <meta charset="utf-8" content="text/html">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+    <script type="text/javaScript" src="js/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/shopcart.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+    <div class="site-topbar">
+        <div class="container">
+            <div class="row clearfix">
+                <div class="col-md-12 column">
+                    <div class="topbar-nav">
+                        <p>欢迎使用该手机商城，本商城旨在整合手机品牌和透明化比较手机配置信息,祝您购物愉快！</p>
+                    </div>
+                    <div class="topbar-cart" id="J_miniCartTrigger">
+                        <a rel="nofollow" onclick="cart();return false;">
+                            <span class="iconfont icon-gouwuchekong"></span>
+                            购物车
+                        </a>
+                    </div>
+                    <div class="topbar-info">
+                        <span class="user">
+                            <a rel="nofollow" class="user-name">
+                                <span class="name"></span>
+                                <span class="iconfont icon-xialajiantou"></span>
+                            </a>
+                            <ul class="user-menu">
+                                <li><a rel="nofollow" href="person.html?type=1" target="_blank">个人中心</a></li>
+                                <li><a rel="nofollow" href="person.html?type=2" target="_blank">我的订单</a></li>
+                                <li><a rel="nofollow" href="person.html?type=3" target="_blank">评价晒单</a></li>
+                                <li><a rel="nofollow" onclick="quit();return false;">退出登录</a></li>
+                            </ul>
+                        </span>
+                        <div id="J_userInfo">
+                            <a rel="nofollow" href="login.html">登录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header header1">
+        <div class="container">
+            <div class="row clearfix">
+                <div class="col-md-2 column logo">
+                    <a href="index.html"><img alt="logo" src="img/logo_1.png" title="首页" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-12 column table_r">
+                <div class="cartHead">
+                    <div class="col col-check">
+                        <span class="iconfont icon-checkbox" onclick="allCheckOrNot(this)"></span>
+                        全选
+                    </div>
+                    <div class="col col-img">&nbsp;</div>
+                    <div class="col col-name">商品名称</div>
+                    <div class="col col-price">单价</div>
+                    <div class="col col-num">数量</div>
+                    <div class="col col-total">小计</div>
+                    <div class="col col-action">操作</div>
+                </div>
+                <div class="cartList"></div>
+            </div>
+            <div class="col-md-12 column table_btn">
+                <div class="cartBtn">
+                    <span class="cart-total">共 <i id="cartTotalNum">0</i> 件商品，已选择 <i id="selTotalNum">0</i> 件</span>
+                    <span class="total-price">
+                        合计：<em id="cartTotalPrice">0</em>元
+                    </span>
+                    <button class="btn btn-sum" onclick="sum()">结算</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

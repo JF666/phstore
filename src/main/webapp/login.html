@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>手机商城</title>
+    <meta charset="utf-8" content="text/html">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+    <script type="text/JavaScript" src="js/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/log.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="logo wBack">
+        <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+    </div>
+    <div class="loginBox">
+        <div class="container">
+            <div class="row clearfix">
+                <div class="col-md-4 col-md-offset-8 column login-box">
+                    <form class="form-horizontal" role="form">
+                        <div class="input-group">
+                            <input type="text" class="Input" placeholder="用户名" id="inputUser" autocomplete="off" />
+                        </div>
+                        <div class="input-group">
+                            <input type="password" class="Input" placeholder="密码" id="inputPassword" />
+                            <span class="help-block"></span>
+                        </div>
+                        <div class="form-group">
+                            <div class="row clearfix">
+                                <div class="col-sm-2">
+                                </div>
+                                <div class="col-sm-8">
+                                    <button type="button" class="btn btn-primary" onclick="log()">登录</button>
+                                    <div class="register">
+                                        <label>首次登录？</label>
+                                        <a onclick="toRes()">立即注册</a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-4 col-md-offset-8 column res-box">
+                    <form class="form-horizontal form-horizontal1" role="form">
+                        <div class="input-group">
+                            <input type="text" class="Input" name="username" placeholder="用户名" id="inputUser1"  autocomplete="off" />
+                            <span class="help-block"></span>
+                        </div>
+                        <div class="input-group">
+                            <input type="password" class="Input" name="password" placeholder="密码" id="inputPassword3" />
+                            <span class="help-block"></span>
+                        </div>
+                    </form>
+                    <div class="input-group">
+                        <input type="password" class="Input" placeholder="确认密码" id="inputPassword4" />
+                        <span class="help-block"></span>
+                    </div>
+                    <div class="form-group">
+                        <div class="row clearfix">
+                            <div class="col-sm-1">
+                            </div>
+                            <div class="col-sm-10">
+                                <button type="button" class="btn btn-primary btn-res" id="btn-res" onclick="res()">注册</button>
+                                <button type="button" class="btn btn-primary btn-res" onclick="toLog()">返回登录</button>
+                                <p class="rule">注册即代表您同意并遵守<a href="#">《用户协议》</a></p>
+                            </div>
+                            <div class="col-sm-1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix bottom wBack">
+        <div class="col-md-8 col-md-offset-2 column bottom_info">
+            <p>版权所有-苏ICP备66666666-苏公网安备66666666666666号-苏ICP证666666号</p>
+        </div>
+    </div>
+</body>
+</html>

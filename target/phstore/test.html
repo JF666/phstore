@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="http://cdn.gbtags.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <title>Title</title>
+    <style>
+        .spinner {
+            width: 200px;
+        }
+        .spinner input {
+            text-align: right;
+        }
+        .input-group-btn-vertical {
+            position: relative;
+            white-space: nowrap;
+            width: 1%;
+            vertical-align: middle;
+            display: table-cell;
+        }
+        .input-group-btn-vertical > .btn {
+            display: block;
+            float: none;
+            width: 100%;
+            max-width: 100%;
+            padding: 8px;
+            margin-left: -1px;
+            position: relative;
+            border-radius: 0;
+        }
+        .input-group-btn-vertical > .btn:first-child {
+            border-top-right-radius: 4px;
+        }
+        .input-group-btn-vertical > .btn:last-child {
+            margin-top: -2px;
+            border-bottom-right-radius: 4px;
+        }
+        .input-group-btn-vertical i{
+            position: absolute;
+            top: 0;
+            left: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-12">
+                <form action="" class="form-horizontal">
+                    <div class="form-group">
+                        <label>用户名</label>
+                        <input type="text" name="username" placeholder="Username" id="username">
+                    </div>
+                    <div class="form-group">
+                        <label>密码</label>
+                        <input type="password" name="password" placeholder="Password" id="password">
+                    </div>
+                    <select id="authority" name="authority">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </form>
+                <button type="button" class="btn btn-primary" onclick="login()">登录</button>
+                <button type="button" class="btn btn-primary" onclick="register()">注册</button>
+                <button type="button" class="btn btn-primary" onclick="update()">修改</button>
+                <button type="button" class="btn btn-danger" onclick="del()">删除</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="page-header"><h3>Bootstrap 3 输入框数字修改效果</h3></div>
+        <div class="input-group spinner">
+            <input type="text" class="form-control" value="1000">
+            <div class="input-group-btn-vertical">
+                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $('.spinner .btn:first-of-type').on('click', function() {
+                $('.spinner input').val( parseInt($('.spinner input').val(), 10) + 1);
+            });
+            $('.spinner .btn:last-of-type').on('click', function() {
+                $('.spinner input').val( parseInt($('.spinner input').val(), 10) - 1);
+            });
+            $.ajax({
+                url: "http://localhost:8080/phstore_war_exploded/tranSts/55",
+                data: {
+                    transts: 1
+                },
+                type: "PUT",
+                success: function (result) {
+                    console.log(result);
+                }, error: function () {
+                    console.log("111");
+                }
+            });
+        })
+        var a = [
+            {
+                "color": "全息幻彩蓝*深空灰*全息幻彩紫",
+                "discount": 0,
+                "price": "2999",
+                "proid": 1,
+                "proname": "小米9",
+                "sellerid": 1,
+                "stock": 9999,
+                "version": "全网通版 6GB+128GB"
+            },
+            {
+                "color": "全息幻彩蓝*深空灰*全息幻彩紫",
+                "discount": 0,
+                "price": "3299",
+                "proid": 9,
+                "proname": "小米9",
+                "sellerid": 1,
+                "stock": 9999,
+                "version": "全网通版 8GB+128GB"
+            },
+            {
+                "color": "全息幻彩蓝*全息幻彩紫*深灰色",
+                "discount": 0,
+                "price": "2299",
+                "proid": 10,
+                "proname": "小米9 SE",
+                "sellerid": 1,
+                "stock": 9999,
+                "version": "6GB+128GB"
+            }];
+        var dataList = [];
+        for (i in a) {
+            if (dataList.indexOf(a[i].proname) === -1) {
+                dataList.push(a[i].proname);
+            }
+        }
+        console.log(dataList);
+        function login() {
+            var username = $("#username").val();
+            var password = $("#password").val();
+            $.ajax({
+                url:"http://localhost:8080/phstore_war_exploded/login",
+                data: {
+                    username: username,
+                    password: password
+                },
+                type:"get",
+                success:function (result) {
+                    console.log(result);
+                }, error:function () {
+                    console.log("111");
+                }
+            });
+        }
+        function register() {
+            alert($(".form-horizontal").serialize());
+            $.ajax({
+                url:"http://localhost:8080/phstore_war_exploded/register",
+                data: $(".form-horizontal").serialize(),
+                type:"POST",
+                success:function (result) {
+                    console.log(result);
+                }, error:function () {
+                    console.log("111");
+                }
+            });
+        }
+        function update() {
+            $.ajax({
+                url:"http://localhost:8080/phstore_war_exploded/user/2",
+                data: $(".form-horizontal").serialize(),
+                type:"PUT",
+                success:function (result) {
+                    console.log(result);
+                }, error:function () {
+                    console.log("111");
+                }
+            });
+        }
+        function del() {
+            $.ajax({
+                url:"http://localhost:8080/phstore_war_exploded/user/6-7-8-9-10-11-12",
+                type:"DELETE",
+                success:function (result) {
+                    console.log(result);
+                }, error:function () {
+                    console.log("111");
+                }
+            });
+        }
+    </script>
+</body>
+</html>

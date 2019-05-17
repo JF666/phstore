@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jf.crud.dao.FrontcameraMapper">
+  <resultMap id="BaseResultMap" type="com.jf.crud.bean.Frontcamera">
+    <id column="fcId" jdbcType="INTEGER" property="fcid" />
+    <result column="fcName" jdbcType="VARCHAR" property="fcname" />
+    <result column="fcPixel" jdbcType="VARCHAR" property="fcpixel" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    fcId, fcName, fcPixel
+  </sql>
+  <select id="selectByExample" parameterType="com.jf.crud.bean.FrontcameraExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from frontcamera
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from frontcamera
+    where fcId = #{fcid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from frontcamera
+    where fcId = #{fcid,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.jf.crud.bean.FrontcameraExample">
+    delete from frontcamera
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.jf.crud.bean.Frontcamera">
+    insert into frontcamera (fcId, fcName, fcPixel)
+    values (#{fcid,jdbcType=INTEGER}, #{fcname,jdbcType=VARCHAR}, #{fcpixel,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.jf.crud.bean.Frontcamera">
+    insert into frontcamera
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="fcid != null">
+        fcId,
+      </if>
+      <if test="fcname != null">
+        fcName,
+      </if>
+      <if test="fcpixel != null">
+        fcPixel,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="fcid != null">
+        #{fcid,jdbcType=INTEGER},
+      </if>
+      <if test="fcname != null">
+        #{fcname,jdbcType=VARCHAR},
+      </if>
+      <if test="fcpixel != null">
+        #{fcpixel,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.jf.crud.bean.FrontcameraExample" resultType="java.lang.Long">
+    select count(*) from frontcamera
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update frontcamera
+    <set>
+      <if test="record.fcid != null">
+        fcId = #{record.fcid,jdbcType=INTEGER},
+      </if>
+      <if test="record.fcname != null">
+        fcName = #{record.fcname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.fcpixel != null">
+        fcPixel = #{record.fcpixel,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update frontcamera
+    set fcId = #{record.fcid,jdbcType=INTEGER},
+      fcName = #{record.fcname,jdbcType=VARCHAR},
+      fcPixel = #{record.fcpixel,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.jf.crud.bean.Frontcamera">
+    update frontcamera
+    <set>
+      <if test="fcname != null">
+        fcName = #{fcname,jdbcType=VARCHAR},
+      </if>
+      <if test="fcpixel != null">
+        fcPixel = #{fcpixel,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where fcId = #{fcid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.jf.crud.bean.Frontcamera">
+    update frontcamera
+    set fcName = #{fcname,jdbcType=VARCHAR},
+      fcPixel = #{fcpixel,jdbcType=VARCHAR}
+    where fcId = #{fcid,jdbcType=INTEGER}
+  </update>
+</mapper>

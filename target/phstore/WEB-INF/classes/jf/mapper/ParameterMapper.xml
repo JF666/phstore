@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="jf.dao.ParameterMapper">
+  <resultMap id="BaseResultMap" type="jf.bean.Parameter">
+    <id column="paraId" jdbcType="INTEGER" property="paraid" />
+    <result column="proId" jdbcType="INTEGER" property="proid" />
+    <result column="cpuId" jdbcType="INTEGER" property="cpuid" />
+    <result column="osId" jdbcType="INTEGER" property="osid" />
+    <result column="rmId" jdbcType="INTEGER" property="rmid" />
+    <result column="screenId" jdbcType="INTEGER" property="screenid" />
+    <result column="rcId" jdbcType="INTEGER" property="rcid" />
+    <result column="fcId" jdbcType="INTEGER" property="fcid" />
+    <result column="recId" jdbcType="INTEGER" property="recid" />
+    <result column="charbattId" jdbcType="INTEGER" property="charbattid" />
+    <result column="sizeId" jdbcType="INTEGER" property="sizeid" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    paraId, proId, cpuId, osId, rmId, screenId, rcId, fcId, recId, charbattId, sizeId
+  </sql>
+  <select id="selectByExample" parameterType="jf.bean.ParameterExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from parameter
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from parameter
+    where paraId = #{paraid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from parameter
+    where paraId = #{paraid,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="jf.bean.ParameterExample">
+    delete from parameter
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="jf.bean.Parameter">
+    insert into parameter (paraId, proId, cpuId, 
+      osId, rmId, screenId, 
+      rcId, fcId, recId, 
+      charbattId, sizeId)
+    values (#{paraid,jdbcType=INTEGER}, #{proid,jdbcType=INTEGER}, #{cpuid,jdbcType=INTEGER}, 
+      #{osid,jdbcType=INTEGER}, #{rmid,jdbcType=INTEGER}, #{screenid,jdbcType=INTEGER}, 
+      #{rcid,jdbcType=INTEGER}, #{fcid,jdbcType=INTEGER}, #{recid,jdbcType=INTEGER}, 
+      #{charbattid,jdbcType=INTEGER}, #{sizeid,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="jf.bean.Parameter">
+    insert into parameter
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="paraid != null">
+        paraId,
+      </if>
+      <if test="proid != null">
+        proId,
+      </if>
+      <if test="cpuid != null">
+        cpuId,
+      </if>
+      <if test="osid != null">
+        osId,
+      </if>
+      <if test="rmid != null">
+        rmId,
+      </if>
+      <if test="screenid != null">
+        screenId,
+      </if>
+      <if test="rcid != null">
+        rcId,
+      </if>
+      <if test="fcid != null">
+        fcId,
+      </if>
+      <if test="recid != null">
+        recId,
+      </if>
+      <if test="charbattid != null">
+        charbattId,
+      </if>
+      <if test="sizeid != null">
+        sizeId,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="paraid != null">
+        #{paraid,jdbcType=INTEGER},
+      </if>
+      <if test="proid != null">
+        #{proid,jdbcType=INTEGER},
+      </if>
+      <if test="cpuid != null">
+        #{cpuid,jdbcType=INTEGER},
+      </if>
+      <if test="osid != null">
+        #{osid,jdbcType=INTEGER},
+      </if>
+      <if test="rmid != null">
+        #{rmid,jdbcType=INTEGER},
+      </if>
+      <if test="screenid != null">
+        #{screenid,jdbcType=INTEGER},
+      </if>
+      <if test="rcid != null">
+        #{rcid,jdbcType=INTEGER},
+      </if>
+      <if test="fcid != null">
+        #{fcid,jdbcType=INTEGER},
+      </if>
+      <if test="recid != null">
+        #{recid,jdbcType=INTEGER},
+      </if>
+      <if test="charbattid != null">
+        #{charbattid,jdbcType=INTEGER},
+      </if>
+      <if test="sizeid != null">
+        #{sizeid,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="jf.bean.ParameterExample" resultType="java.lang.Long">
+    select count(*) from parameter
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update parameter
+    <set>
+      <if test="record.paraid != null">
+        paraId = #{record.paraid,jdbcType=INTEGER},
+      </if>
+      <if test="record.proid != null">
+        proId = #{record.proid,jdbcType=INTEGER},
+      </if>
+      <if test="record.cpuid != null">
+        cpuId = #{record.cpuid,jdbcType=INTEGER},
+      </if>
+      <if test="record.osid != null">
+        osId = #{record.osid,jdbcType=INTEGER},
+      </if>
+      <if test="record.rmid != null">
+        rmId = #{record.rmid,jdbcType=INTEGER},
+      </if>
+      <if test="record.screenid != null">
+        screenId = #{record.screenid,jdbcType=INTEGER},
+      </if>
+      <if test="record.rcid != null">
+        rcId = #{record.rcid,jdbcType=INTEGER},
+      </if>
+      <if test="record.fcid != null">
+        fcId = #{record.fcid,jdbcType=INTEGER},
+      </if>
+      <if test="record.recid != null">
+        recId = #{record.recid,jdbcType=INTEGER},
+      </if>
+      <if test="record.charbattid != null">
+        charbattId = #{record.charbattid,jdbcType=INTEGER},
+      </if>
+      <if test="record.sizeid != null">
+        sizeId = #{record.sizeid,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update parameter
+    set paraId = #{record.paraid,jdbcType=INTEGER},
+      proId = #{record.proid,jdbcType=INTEGER},
+      cpuId = #{record.cpuid,jdbcType=INTEGER},
+      osId = #{record.osid,jdbcType=INTEGER},
+      rmId = #{record.rmid,jdbcType=INTEGER},
+      screenId = #{record.screenid,jdbcType=INTEGER},
+      rcId = #{record.rcid,jdbcType=INTEGER},
+      fcId = #{record.fcid,jdbcType=INTEGER},
+      recId = #{record.recid,jdbcType=INTEGER},
+      charbattId = #{record.charbattid,jdbcType=INTEGER},
+      sizeId = #{record.sizeid,jdbcType=INTEGER}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="jf.bean.Parameter">
+    update parameter
+    <set>
+      <if test="proid != null">
+        proId = #{proid,jdbcType=INTEGER},
+      </if>
+      <if test="cpuid != null">
+        cpuId = #{cpuid,jdbcType=INTEGER},
+      </if>
+      <if test="osid != null">
+        osId = #{osid,jdbcType=INTEGER},
+      </if>
+      <if test="rmid != null">
+        rmId = #{rmid,jdbcType=INTEGER},
+      </if>
+      <if test="screenid != null">
+        screenId = #{screenid,jdbcType=INTEGER},
+      </if>
+      <if test="rcid != null">
+        rcId = #{rcid,jdbcType=INTEGER},
+      </if>
+      <if test="fcid != null">
+        fcId = #{fcid,jdbcType=INTEGER},
+      </if>
+      <if test="recid != null">
+        recId = #{recid,jdbcType=INTEGER},
+      </if>
+      <if test="charbattid != null">
+        charbattId = #{charbattid,jdbcType=INTEGER},
+      </if>
+      <if test="sizeid != null">
+        sizeId = #{sizeid,jdbcType=INTEGER},
+      </if>
+    </set>
+    where paraId = #{paraid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="jf.bean.Parameter">
+    update parameter
+    set proId = #{proid,jdbcType=INTEGER},
+      cpuId = #{cpuid,jdbcType=INTEGER},
+      osId = #{osid,jdbcType=INTEGER},
+      rmId = #{rmid,jdbcType=INTEGER},
+      screenId = #{screenid,jdbcType=INTEGER},
+      rcId = #{rcid,jdbcType=INTEGER},
+      fcId = #{fcid,jdbcType=INTEGER},
+      recId = #{recid,jdbcType=INTEGER},
+      charbattId = #{charbattid,jdbcType=INTEGER},
+      sizeId = #{sizeid,jdbcType=INTEGER}
+    where paraId = #{paraid,jdbcType=INTEGER}
+  </update>
+</mapper>

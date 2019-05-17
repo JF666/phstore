@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jf.crud.dao.BatteryMapper">
+  <resultMap id="BaseResultMap" type="com.jf.crud.bean.Battery">
+    <id column="charbattId" jdbcType="INTEGER" property="charbattid" />
+    <result column="capacity" jdbcType="VARCHAR" property="capacity" />
+    <result column="charInter" jdbcType="VARCHAR" property="charinter" />
+    <result column="charPower" jdbcType="VARCHAR" property="charpower" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    charbattId, capacity, charInter, charPower
+  </sql>
+  <select id="selectByExample" parameterType="com.jf.crud.bean.BatteryExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from battery
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from battery
+    where charbattId = #{charbattid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from battery
+    where charbattId = #{charbattid,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.jf.crud.bean.BatteryExample">
+    delete from battery
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.jf.crud.bean.Battery">
+    insert into battery (charbattId, capacity, charInter, 
+      charPower)
+    values (#{charbattid,jdbcType=INTEGER}, #{capacity,jdbcType=VARCHAR}, #{charinter,jdbcType=VARCHAR}, 
+      #{charpower,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.jf.crud.bean.Battery">
+    insert into battery
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="charbattid != null">
+        charbattId,
+      </if>
+      <if test="capacity != null">
+        capacity,
+      </if>
+      <if test="charinter != null">
+        charInter,
+      </if>
+      <if test="charpower != null">
+        charPower,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="charbattid != null">
+        #{charbattid,jdbcType=INTEGER},
+      </if>
+      <if test="capacity != null">
+        #{capacity,jdbcType=VARCHAR},
+      </if>
+      <if test="charinter != null">
+        #{charinter,jdbcType=VARCHAR},
+      </if>
+      <if test="charpower != null">
+        #{charpower,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.jf.crud.bean.BatteryExample" resultType="java.lang.Long">
+    select count(*) from battery
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update battery
+    <set>
+      <if test="record.charbattid != null">
+        charbattId = #{record.charbattid,jdbcType=INTEGER},
+      </if>
+      <if test="record.capacity != null">
+        capacity = #{record.capacity,jdbcType=VARCHAR},
+      </if>
+      <if test="record.charinter != null">
+        charInter = #{record.charinter,jdbcType=VARCHAR},
+      </if>
+      <if test="record.charpower != null">
+        charPower = #{record.charpower,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update battery
+    set charbattId = #{record.charbattid,jdbcType=INTEGER},
+      capacity = #{record.capacity,jdbcType=VARCHAR},
+      charInter = #{record.charinter,jdbcType=VARCHAR},
+      charPower = #{record.charpower,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.jf.crud.bean.Battery">
+    update battery
+    <set>
+      <if test="capacity != null">
+        capacity = #{capacity,jdbcType=VARCHAR},
+      </if>
+      <if test="charinter != null">
+        charInter = #{charinter,jdbcType=VARCHAR},
+      </if>
+      <if test="charpower != null">
+        charPower = #{charpower,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where charbattId = #{charbattid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.jf.crud.bean.Battery">
+    update battery
+    set capacity = #{capacity,jdbcType=VARCHAR},
+      charInter = #{charinter,jdbcType=VARCHAR},
+      charPower = #{charpower,jdbcType=VARCHAR}
+    where charbattId = #{charbattid,jdbcType=INTEGER}
+  </update>
+</mapper>

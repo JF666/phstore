@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jf.crud.dao.TransactionMapper">
+  <resultMap id="BaseResultMap" type="com.jf.crud.bean.Transaction">
+    <id column="tranId" jdbcType="INTEGER" property="tranid" />
+    <result column="buyerId" jdbcType="INTEGER" property="buyerid" />
+    <result column="sellerId" jdbcType="INTEGER" property="sellerid" />
+    <result column="proId" jdbcType="INTEGER" property="proid" />
+    <result column="amount" jdbcType="INTEGER" property="amount" />
+    <result column="tranSts" jdbcType="INTEGER" property="transts" />
+    <result column="createTime" jdbcType="VARCHAR" property="createtime" />
+    <result column="acprice" jdbcType="INTEGER" property="acprice" />
+    <result column="color" jdbcType="VARCHAR" property="color" />
+    <result column="pic" jdbcType="VARCHAR" property="pic" />
+  </resultMap>
+  <resultMap id="WithProSellerResultMap" type="com.jf.crud.bean.Transaction">
+    <id column="tranId" jdbcType="INTEGER" property="tranid" />
+    <result column="amount" jdbcType="INTEGER" property="amount" />
+    <result column="tranSts" jdbcType="INTEGER" property="transts" />
+    <result column="createTime" jdbcType="VARCHAR" property="createtime" />
+    <result column="acprice" jdbcType="INTEGER" property="acprice" />
+    <result column="color" jdbcType="VARCHAR" property="color" />
+    <result column="pic" jdbcType="VARCHAR" property="pic" />
+    <association javaType="com.jf.crud.bean.Buyer" property="buyer" column="buyerId">
+      <id column="buyerId" property="buyerid" />
+      <result column="userId" jdbcType="INTEGER" property="userid" />
+      <result column="nickname" jdbcType="VARCHAR" property="nickname" />
+      <result column="balance" jdbcType="VARCHAR" property="balance" />
+      <result column="receiveAdd" jdbcType="VARCHAR" property="receiveadd" />
+      <result column="phoneNum" jdbcType="VARCHAR" property="phonenum" />
+      <result column="realName" jdbcType="VARCHAR" property="realname" />
+    </association>
+    <association javaType="com.jf.crud.bean.Product" property="product" column="proId">
+      <id column="proId" property="proId" />
+      <result column="pic" property="pic" />
+      <result column="proIntro" property="proIntro" />
+      <result column="version" property="version" />
+      <result column="stock" property="stock" />
+      <result column="discount" property="discount" />
+      <result column="proName" property="proName" />
+      <result column="price" property="price" />
+    </association>
+    <association javaType="com.jf.crud.bean.Seller" property="seller" column="sellerId">
+      <id column="sellerId" property="sellerid" />
+      <result column="company" property="company" />
+      <result column="userId" property="userid" />
+    </association>
+  </resultMap>
+  <resultMap id="WithProResultMap" type="com.jf.crud.bean.Transaction">
+    <id column="tranId" jdbcType="INTEGER" property="tranid" />
+    <result column="buyerId" jdbcType="INTEGER" property="buyerid" />
+    <result column="sellerId" jdbcType="INTEGER" property="sellerid" />
+    <result column="amount" jdbcType="INTEGER" property="amount" />
+    <result column="tranSts" jdbcType="INTEGER" property="transts" />
+    <result column="createTime" jdbcType="VARCHAR" property="createtime" />
+    <result column="acprice" jdbcType="INTEGER" property="acprice" />
+    <result column="color" jdbcType="VARCHAR" property="color" />
+    <result column="pic" jdbcType="VARCHAR" property="pic" />
+    <association javaType="com.jf.crud.bean.Product" property="product" column="proId">
+      <id column="proId" property="proId" />
+      <result column="pic" property="pic" />
+      <result column="proIntro" property="proIntro" />
+      <result column="version" property="version" />
+      <result column="stock" property="stock" />
+      <result column="discount" property="discount" />
+      <result column="proName" property="proName" />
+      <result column="price" property="price" />
+    </association>
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    tranId, buyerId, sellerId, proId, amount, tranSts, createTime, acprice, color, pic
+  </sql>
+  <sql id="WithPro_Column_List">
+    t.tranId, t.buyerId, t.sellerId, t.amount,
+    t.tranSts, t.createTime, t.acprice, t.color, t.pic,
+    p.proId, p.pic, p.proIntro, p.version,
+    p.stock, p.discount, p.proName, p.price
+  </sql>
+  <sql id="WithProSeller_Column_List">
+    t.tranId, t.amount, t.tranSts, t.createTime, t.acprice, t.color, t.pic,
+    p.proId, p.pic, p.proIntro, p.version,
+    p.stock, p.discount, p.proName, p.price,
+    s.sellerId, s.company, s.userId,
+    b.buyerId, b.userId, b.nickname,
+    b.balance, b.receiveAdd, b.phoneNum, b.realName
+  </sql>
+  <select id="selectByExample" parameterType="com.jf.crud.bean.TransactionExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from transaction
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="WithProResultMap">
+    select 
+    <include refid="WithPro_Column_List" />
+    from transaction t
+    left join product p on t.proId = p.proId
+    where buyerId = #{buyerid,jdbcType=INTEGER}
+  </select>
+  <select id="selectByPrimaryKeyWithProSeller" parameterType="java.lang.String" resultMap="WithProSellerResultMap">
+    select
+    <include refid="WithProSeller_Column_List" />
+    from transaction t left join product p on t.proId=p.proId
+    left join seller s on t.sellerId=s.sellerId
+    left join buyer b on t.buyerId=b.buyerId
+    where createTime = #{createtime,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from transaction
+    where tranId = #{tranid,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.jf.crud.bean.TransactionExample">
+    delete from transaction
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.jf.crud.bean.Transaction">
+    insert into transaction (tranId, buyerId, sellerId, 
+      proId, amount, tranSts, 
+      createTime, acprice, color, 
+      pic)
+    values (#{tranid,jdbcType=INTEGER}, #{buyerid,jdbcType=INTEGER}, #{sellerid,jdbcType=INTEGER}, 
+      #{proid,jdbcType=INTEGER}, #{amount,jdbcType=INTEGER}, #{transts,jdbcType=INTEGER}, 
+      #{createtime,jdbcType=VARCHAR}, #{acprice,jdbcType=INTEGER}, #{color,jdbcType=VARCHAR}, 
+      #{pic,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.jf.crud.bean.Transaction">
+    insert into transaction
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="tranid != null">
+        tranId,
+      </if>
+      <if test="buyerid != null">
+        buyerId,
+      </if>
+      <if test="sellerid != null">
+        sellerId,
+      </if>
+      <if test="proid != null">
+        proId,
+      </if>
+      <if test="amount != null">
+        amount,
+      </if>
+      <if test="transts != null">
+        tranSts,
+      </if>
+      <if test="createtime != null">
+        createTime,
+      </if>
+      <if test="acprice != null">
+        acprice,
+      </if>
+      <if test="color != null">
+        color,
+      </if>
+      <if test="pic != null">
+        pic,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="tranid != null">
+        #{tranid,jdbcType=INTEGER},
+      </if>
+      <if test="buyerid != null">
+        #{buyerid,jdbcType=INTEGER},
+      </if>
+      <if test="sellerid != null">
+        #{sellerid,jdbcType=INTEGER},
+      </if>
+      <if test="proid != null">
+        #{proid,jdbcType=INTEGER},
+      </if>
+      <if test="amount != null">
+        #{amount,jdbcType=INTEGER},
+      </if>
+      <if test="transts != null">
+        #{transts,jdbcType=INTEGER},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=VARCHAR},
+      </if>
+      <if test="acprice != null">
+        #{acprice,jdbcType=INTEGER},
+      </if>
+      <if test="color != null">
+        #{color,jdbcType=VARCHAR},
+      </if>
+      <if test="pic != null">
+        #{pic,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.jf.crud.bean.TransactionExample" resultType="java.lang.Long">
+    select count(*) from transaction
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update transaction
+    <set>
+      <if test="record.tranid != null">
+        tranId = #{record.tranid,jdbcType=INTEGER},
+      </if>
+      <if test="record.buyerid != null">
+        buyerId = #{record.buyerid,jdbcType=INTEGER},
+      </if>
+      <if test="record.sellerid != null">
+        sellerId = #{record.sellerid,jdbcType=INTEGER},
+      </if>
+      <if test="record.proid != null">
+        proId = #{record.proid,jdbcType=INTEGER},
+      </if>
+      <if test="record.amount != null">
+        amount = #{record.amount,jdbcType=INTEGER},
+      </if>
+      <if test="record.transts != null">
+        tranSts = #{record.transts,jdbcType=INTEGER},
+      </if>
+      <if test="record.createtime != null">
+        createTime = #{record.createtime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.acprice != null">
+        acprice = #{record.acprice,jdbcType=INTEGER},
+      </if>
+      <if test="record.color != null">
+        color = #{record.color,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pic != null">
+        pic = #{record.pic,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update transaction
+    set tranId = #{record.tranid,jdbcType=INTEGER},
+      buyerId = #{record.buyerid,jdbcType=INTEGER},
+      sellerId = #{record.sellerid,jdbcType=INTEGER},
+      proId = #{record.proid,jdbcType=INTEGER},
+      amount = #{record.amount,jdbcType=INTEGER},
+      tranSts = #{record.transts,jdbcType=INTEGER},
+      createTime = #{record.createtime,jdbcType=VARCHAR},
+      acprice = #{record.acprice,jdbcType=INTEGER},
+      color = #{record.color,jdbcType=VARCHAR},
+      pic = #{record.pic,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="map">
+    update transaction
+    <set>
+      <if test="transts != null">
+        tranSts = #{transts,jdbcType=INTEGER}
+      </if>
+    </set>
+    where tranId = #{tranid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.jf.crud.bean.Transaction">
+    update transaction
+    set buyerId = #{buyerid,jdbcType=INTEGER},
+      sellerId = #{sellerid,jdbcType=INTEGER},
+      proId = #{proid,jdbcType=INTEGER},
+      amount = #{amount,jdbcType=INTEGER},
+      tranSts = #{transts,jdbcType=INTEGER},
+      createTime = #{createtime,jdbcType=VARCHAR},
+      acprice = #{acprice,jdbcType=INTEGER},
+      color = #{color,jdbcType=VARCHAR},
+      pic = #{pic,jdbcType=VARCHAR}
+    where tranId = #{tranid,jdbcType=INTEGER}
+  </update>
+</mapper>

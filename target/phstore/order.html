@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>手机商城</title>
+    <meta charset="utf-8" content="text/html">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+    <script type="text/javaScript" src="js/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/order.js"></script>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/iconfont.css">
+</head>
+<body>
+    <div class="site-topbar">
+        <div class="container">
+            <div class="row clearfix">
+                <div class="col-md-12 column">
+                    <div class="topbar-nav">
+                        <p>欢迎使用该手机商城，本商城旨在整合手机品牌和透明化比较手机配置信息,祝您购物愉快！</p>
+                    </div>
+                    <div class="topbar-cart" id="J_miniCartTrigger">
+                        <a rel="nofollow" onclick="cart();return false;">
+                            <span class="iconfont icon-gouwuchekong"></span>
+                            购物车
+                        </a>
+                    </div>
+                    <div class="topbar-info">
+                            <span class="user">
+                                <a rel="nofollow" class="user-name">
+                                    <span class="name"></span>
+                                    <span class="iconfont icon-xialajiantou"></span>
+                                </a>
+                                <ul class="user-menu">
+                                    <li><a rel="nofollow" onclick="toPerson()">个人中心</a></li>
+                                    <li><a rel="nofollow" onclick="toOrder()">我的订单</a></li>
+                                    <li><a rel="nofollow" onclick="toComment()">评价晒单</a></li>
+                                    <li><a rel="nofollow" onclick="quit();return false;">退出登录</a></li>
+                                </ul>
+                            </span>
+                        <div id="J_userInfo">
+                            <a rel="nofollow" href="login.html">登录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header header1">
+        <div class="container">
+            <div class="row clearfix">
+                <div class="col-md-2 column logo">
+                    <a href="index.html"><img alt="logo" src="img/logo_1.png" title="首页" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-12 column table_r">
+                <div class="tranAdd">
+                    <h2>收货地址</h2>
+                    <label>收货人：</label><span class="realName"></span>
+                    <br>
+                    <label>电话号码：</label><span class="phNum"></span>
+                    <br>
+                    <label>地址：</label><span class="address"></span>
+                </div>
+                <div class="cartList tranList">
+                    <h2>商品</h2>
+                </div>
+            </div>
+            <div class="col-md-12 column table_btn">
+                <div class="cartBtn">
+                    <span class="total-price">
+                        应付总额：<em id="cartTotalPrice">0</em>元
+                    </span>
+                    <button class="btn btn-sum btn-order" onclick="order()">立即下单</button>
+                    <button class="btn btn-return" onclick="returnCart()">返回上一步</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row clearfix bottom">
+        <div class="col-md-8 col-md-offset-2 column bottom_info">
+            <p>版权所有-苏ICP备66666666-苏公网安备66666666666666号-苏ICP证666666号</p>
+        </div>
+    </div>
+</body>
+</html>
