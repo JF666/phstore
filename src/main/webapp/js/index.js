@@ -54,15 +54,37 @@ $(function () {
 function toPn(n) {
     $(".products1").empty();
     $(".page").empty();
+    var pronames = "";
+    var acprices = "";
     $.ajax({
-        url: "http://localhost:8080/phstore_war_exploded/allPro",
+        url: "http://localhost:8080/phstore_war_exploded/getAcPrice",
         type: "GET",
-        data: {pn: n},
+        data: {},
+        async: false,
+        success: function (response) {
+            var data = response.extend.products;
+            for (i in data) {
+                acprices += parseInt(data[i].acprice)+"-";
+                pronames += data[i].proName+"-";
+            }
+            acprices = acprices.substring(0, acprices.length-1);
+            pronames = pronames.substring(0, pronames.length-1);
+        }, error: function () {
+        }
+    });
+    $.ajax({
+        url: "http://localhost:8080/phstore_war_exploded/getByName",
+        type: "GET",
+        data: {
+            pn: n,
+            pronames: pronames
+        },
         success: function (response) {
             var data = response.extend.pageInfo.list;
             var isFp = response.extend.pageInfo.isFirstPage;
             var isLp = response.extend.pageInfo.isLastPage;
             var ul = document.createElement("ul");
+            var acprice = acprices.split("-");
             for (i in data) {
                 var li, a, div, img, h4, span1, span2, span3, p, del, br;
                 li = document.createElement("li");
@@ -77,10 +99,13 @@ function toPn(n) {
                 del = document.createElement("del");
                 br = document.createElement("br");
                 img.alt = data[i].proname;
-                img.src = data[i].pic;
+                var pic = data[i].pic.split("*");
+                var picSrc = pic[0].split("-");
+                img.src = picSrc[0];
                 img.width = 160;
                 h4.innerHTML = data[i].proname;
-                span1.innerHTML = data[i].intro;
+                var intro = data[i].proIntro.split("-");
+                span1.innerHTML = intro[0];
                 div.setAttribute("class", "dis_info");
                 a.href = "detail.html?name=" + data[i].proname;
                 div.append(img);
@@ -88,14 +113,14 @@ function toPn(n) {
                 div.append(span1);
                 div.append(br);
                 if (data[i].discount > 0) {
-                    span2.innerHTML = data[i].minprice - data[i].discount + "元起" + "&nbsp;";
+                    span2.innerHTML = acprice[i] + "元起" + "&nbsp;";
                     span2.setAttribute("class", "num_n");
-                    span3.innerHTML = data[i].minprice + "元起";
+                    span3.innerHTML = Number(acprice[i])+data[i].discount + "元起";
                     div.append(span2);
                     del.append(span3);
                     div.append(del);
                 } else {
-                    span3.innerHTML = data[i].minprice + "元起";
+                    span3.innerHTML = acprice[i] + "元起";
                     span3.setAttribute("class", "num_n");
                     div.append(span3);
                 }
@@ -138,7 +163,7 @@ function toPn(n) {
             }
         }, error: function () {
         }
-    })
+    });
 }
 function quit() {
     $(".user").empty();
@@ -150,7 +175,6 @@ function quit() {
     $(".user").append(li1);
     window.location.href = "index.html";
     localStorage.removeItem("username");
-    localStorage.removeItem("buyerId");
 }
 function over(obj) {
     $.ajax({
