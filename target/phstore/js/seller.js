@@ -411,7 +411,7 @@ function getOrder() {
                     var color = data[i].color;
                     var createtime = new Date(parseInt(data[i].createtime)).toLocaleString().replace(/年|月/g, "-").replace(/日/g, " ");
                     var pic = data[i].pic;
-                    var proid = data[i].proid;
+                    var proid = data[i].product.proId;
                     var proname = data[i].product.proname;
                     var version = data[i].product.version;
                     var realname = data[i].buyer.realname;
@@ -426,7 +426,7 @@ function getOrder() {
                             .append($("<br>"))
                             .append($("<h4>订单商品信息</h4>"))
                             .append($("<br>"))
-                            .append($("<h4>该商品已失效！</h4>"))
+                            .append($("<h3>该商品已失效！</h3>"))
                         );
                     } else {
                         $(".order").append($("<div></div>").addClass("orderList").attr("proid", proid)
@@ -475,7 +475,7 @@ function getComment() {
                     var version = data[i].product.version;
                     if (proid === null) {
                         $(".comment").append($("<div></div>").addClass("orderList comList")
-                            .append($("<h4>该商品已失效！</h4>"))
+                            .append($("<h3>该商品已失效！</h3>"))
                         );
                     } else {
                         if (pros.indexOf(proid) === -1) {

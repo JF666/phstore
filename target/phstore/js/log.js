@@ -1,7 +1,6 @@
 function log() {
     var username=$("#inputUser");
     var password=$("#inputPassword");
-    console.log(username.val()+":"+password.val());
     if(username.val() === "" || password.val() === ""){
         password.css("border-bottom", "1px solid red")
             .parent().removeClass("has-success has-error").addClass("has-error")
@@ -48,11 +47,13 @@ function log() {
                                     location.href="seller.html?id="+id;
                                 } else {
                                     localStorage.setItem("sellerId",response.extend.seller.sellerid);
-                                    location.href="seller.html";
+                                    location.href="seller.html?id="+id;
                                 }
                             }, error: function () {
                             }
                         });
+                    } else {
+                        location.href="admin.html";
                     }
                 }
                 else {

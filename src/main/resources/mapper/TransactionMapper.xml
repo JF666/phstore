@@ -142,13 +142,16 @@
     b.buyerId, b.userId, b.nickname,
     b.balance, b.receiveAdd, b.phoneNum, b.realName
   </sql>
-  <select id="selectByExample" parameterType="com.jf.crud.bean.TransactionExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.jf.crud.bean.TransactionExample" resultMap="WithProSellerResultMap">
     select
     <if test="distinct">
       distinct
     </if>
-    <include refid="Base_Column_List" />
-    from transaction
+    <include refid="WithProSeller_Column_List" />
+    from transaction t
+    left join product p on t.proId = p.proId
+    left join seller s on t.sellerId=s.sellerId
+    left join buyer b on t.buyerId=b.buyerId
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>

@@ -32,6 +32,15 @@ public class CommentController {
         return Msg.success().add("pageInfo", page);
     }
     /**
+     * 获取所有comment表信息
+     */
+    @RequestMapping(value = "/allcomment")
+    @ResponseBody
+    public Msg getComments() {
+        List<Comment> comments = commentService.getAll();
+        return Msg.success().add("comments", comments);
+    }
+    /**
      * 新增一条comment记录
      */
     @RequestMapping(value = "/commentInsert",method = RequestMethod.POST)

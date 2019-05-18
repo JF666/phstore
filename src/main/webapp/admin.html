@@ -64,6 +64,7 @@
                 <div class="content">
                     <div class="person">
                         <h1>用户管理</h1>
+                        <a onclick="addPer()" class="btn btn-shop btn-shop1">添加用户</a>
                     </div>
                     <div class="addPerson">
                         <h1>添加用户</h1>
@@ -91,10 +92,6 @@
                             <div class="input-group">
                                 <input type="text" class="Input" placeholder="密码" id="inputPassword" autocomplete="off" />
                             </div>
-                            <select id="inputAuth">
-                                <option value="1">买家</option>
-                                <option value="2">卖家</option>
-                            </select>
                         </form>
                         <button class="btn btn-primary" onclick="saveMod()">保存</button>
                         <button class="btn btn-default" onclick="cancelMod()">取消</button>
@@ -124,6 +121,8 @@
                             <div class="input-group">
                                 <input type="text" class="Input" placeholder="商品颜色" id="inColor" autocomplete="off" />
                             </div>
+                            <select id="inSeller">
+                            </select>
                         </form>
                         <button class="btn btn-primary" onclick="saveAddPro()">保存</button>
                         <button class="btn btn-default" onclick="cancelPro()">取消</button>
@@ -148,12 +147,13 @@
                             <div class="input-group">
                                 <input type="text" class="Input" placeholder="商品颜色" id="inputColor" autocomplete="off" />
                             </div>
+                            <select id="inputSeller">
+                            </select>
                         </form>
                         <button class="btn btn-primary" onclick="saveModPro()">保存</button>
                         <button class="btn btn-default" onclick="cancelPro()">取消</button>
                     </div>
                     <div class="order">
-                        <h1>订单管理</h1>
                     </div>
                     <div class="modifyOrder">
                         <h1>修改订单</h1>
@@ -180,7 +180,6 @@
                         <button class="btn btn-default" onclick="cancelOrder()">取消</button>
                     </div>
                     <div class="comment">
-                        <h1>评价管理</h1>
                     </div>
                     <div class="modifyComment">
                         <h1>修改回复</h1>
@@ -188,7 +187,8 @@
                             <div class="col-md-4 column commentPro">
                             </div>
                             <div class="col-md-8 column commentInfo">
-                                <textarea id="commentContent1" name="" class="goods-comment-content">写点感谢客户的话吧</textarea>
+                                <textarea id="commentContent" name="" class="goods-comment-content"></textarea>
+                                <textarea id="commentContent1" name="" class="goods-comment-content"></textarea>
                                 <div class="comment-answer-btn">
                                     <button class="btn btn-primary" onclick="saveComm(this)">保存</button>
                                     <button class="btn btn-default" onclick="cancelComm()">取消</button>
