@@ -84,7 +84,9 @@
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
-    group by proName
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
   </select>
   <select id="selectBySellerId" resultMap="BaseResultMap">
       select
@@ -98,15 +100,27 @@
     from product
     where proId = #{proid,jdbcType=INTEGER}
   </select>
+  <select id="selectAcPrice" resultType="java.util.Map">
+    SELECT proName, min(price-discount) as acprice
+    FROM product
+    group by proName
+  </select>
   <select id="selectByProName" parameterType="java.lang.String" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
     from product
     where proName = #{proname,jdbcType=VARCHAR}
   </select>
+  <select id="fuzzyQuery" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from product
+    where proName like CONCAT('%',#{proName},'%')
+  </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from product
-    where proId = #{proid,jdbcType=INTEGER}
+    where proId = #{proid,jdbcType=INTEGER};
   </delete>
   <delete id="deleteByExample" parameterType="com.jf.crud.bean.ProductExample">
     delete from product
@@ -127,16 +141,16 @@
   <insert id="insertSelective" parameterType="com.jf.crud.bean.Product">
     insert into product
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="proid != null">
+      <if test="proId != null">
         proId,
       </if>
       <if test="pic != null">
         pic,
       </if>
-      <if test="prointro != null">
+      <if test="proIntro != null">
         proIntro,
       </if>
-      <if test="sellerid != null">
+      <if test="sellerId != null">
         sellerId,
       </if>
       <if test="version != null">
@@ -148,7 +162,7 @@
       <if test="discount != null">
         discount,
       </if>
-      <if test="proname != null">
+      <if test="proName != null">
         proName,
       </if>
       <if test="price != null">
@@ -159,17 +173,17 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="proid != null">
-        #{proid,jdbcType=INTEGER},
+      <if test="proId != null">
+        #{proId,jdbcType=INTEGER},
       </if>
       <if test="pic != null">
         #{pic,jdbcType=VARCHAR},
       </if>
-      <if test="prointro != null">
-        #{prointro,jdbcType=VARCHAR},
+      <if test="proIntro != null">
+        #{proIntro,jdbcType=VARCHAR},
       </if>
-      <if test="sellerid != null">
-        #{sellerid,jdbcType=INTEGER},
+      <if test="sellerId != null">
+        #{sellerId,jdbcType=INTEGER},
       </if>
       <if test="version != null">
         #{version,jdbcType=VARCHAR},
@@ -180,8 +194,8 @@
       <if test="discount != null">
         #{discount,jdbcType=INTEGER},
       </if>
-      <if test="proname != null">
-        #{proname,jdbcType=VARCHAR},
+      <if test="proName != null">
+        #{proName,jdbcType=VARCHAR},
       </if>
       <if test="price != null">
         #{price,jdbcType=VARCHAR},
@@ -257,8 +271,8 @@
       <if test="pic != null">
         pic = #{pic,jdbcType=VARCHAR},
       </if>
-      <if test="prointro != null">
-        proIntro = #{prointro,jdbcType=VARCHAR},
+      <if test="proIntro != null">
+        proIntro = #{proIntro,jdbcType=VARCHAR},
       </if>
       <if test="sellerid != null">
         sellerId = #{sellerid,jdbcType=INTEGER},
@@ -282,7 +296,7 @@
         color = #{color,jdbcType=VARCHAR},
       </if>
     </set>
-    where proId = #{proid,jdbcType=INTEGER}
+    where proId = #{proId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.jf.crud.bean.Product">
     update product

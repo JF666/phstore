@@ -18,6 +18,9 @@ public interface ProductMapper {
 
     List<Product> selectByExample(ProductExample example);
 
+    List<Product> fuzzyQuery(String key);
+
+    List<Product> selectAcPrice();
 
     List<Product> selectBySellerId(Integer sellerid);
 

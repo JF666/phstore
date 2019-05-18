@@ -51,6 +51,15 @@ public class UserController {
         }
     }
     /**
+     * 新增一条记录
+     */
+    @RequestMapping(value = "/userInsert",method = RequestMethod.POST)
+    @ResponseBody
+    public Msg userInsert(@Valid User user) {
+        userService.insertUser(user);
+        return Msg.success();
+    }
+    /**
      * 注册
      */
     @RequestMapping(value = "/register")

@@ -6,25 +6,78 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e763d031-0616-41b1-bf08-82352ad59c06" name="Default Changelist" comment="">
+    <list default="true" id="e763d031-0616-41b1-bf08-82352ad59c06" name="Default Changelist" comment="首页所有商品方法更新">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/admin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jf/crud/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jf/crud/controller/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jf/crud/dao/CommentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jf/crud/dao/CommentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jf/crud/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jf/crud/service/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CommentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CommentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TransactionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TransactionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mbg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mbg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jf/crud/bean/Allpro.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jf/crud/bean/AllproExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jf/crud/controller/AllProController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jf/crud/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jf/crud/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jf/crud/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jf/crud/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jf/crud/dao/AllproMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jf/crud/dao/BuyerMapperTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jf/crud/dao/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jf/crud/dao/ProductMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jf/crud/dao/TransactionMapperTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jf/crud/dao/UserMapperTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jf/crud/service/AllProService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jf/crud/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jf/crud/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/AllproMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ProductMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ProductMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/log.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/log.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/person.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/person.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/search.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/js/seller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/seller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/seller.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/seller.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jf/crud/controller/TransactionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jf/crud/controller/TransactionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jf/crud/dao/TransactionMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jf/crud/dao/TransactionMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jf/crud/service/TransactionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jf/crud/service/TransactionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/TransactionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/TransactionMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/controller/TransactionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/controller/TransactionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/dao/TransactionMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/dao/TransactionMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/service/TransactionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/service/TransactionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/mapper/TransactionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/mapper/TransactionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jf/crud/bean/Allpro.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jf/crud/bean/AllproExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jf/crud/bean/AllproExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jf/crud/bean/AllproExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jf/crud/bean/AllproExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jf/crud/controller/AllProController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jf/crud/controller/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jf/crud/controller/CommentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jf/crud/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jf/crud/controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jf/crud/dao/AllproMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jf/crud/dao/BuyerMapperTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jf/crud/dao/CommentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jf/crud/dao/CommentMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jf/crud/dao/ProductMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jf/crud/dao/ProductMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jf/crud/dao/TransactionMapperTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jf/crud/dao/UserMapperTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jf/crud/service/AllProService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jf/crud/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jf/crud/service/CommentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jf/crud/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jf/crud/service/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/AllproMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/CommentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/CommentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ProductMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ProductMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/bean/Allpro.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/bean/AllproExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/bean/AllproExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/bean/AllproExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/bean/AllproExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/controller/AllProController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/controller/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/controller/CommentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/dao/AllproMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/dao/BuyerMapperTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/dao/CommentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/dao/CommentMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/dao/ProductMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/dao/ProductMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/dao/TransactionMapperTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/dao/UserMapperTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/service/AllProService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/service/CommentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/service/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/mapper/AllproMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/mapper/CommentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/mapper/CommentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/mapper/ProductMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/mapper/ProductMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/js/person.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/js/person.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/js/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/js/search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/js/seller.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/js/seller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/person.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/person.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/seller.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/seller.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -66,23 +119,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="1221" column="25" selection-start-line="1221" selection-start-column="25" selection-end-line="1221" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/seller.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="9" column="66" selection-start-line="9" selection-start-column="66" selection-end-line="9" selection-end-column="66" />
+            <state relative-caret-position="632">
+              <caret line="181" column="7" lean-forward="true" selection-start-line="181" selection-start-column="7" selection-end-line="181" selection-end-column="7" />
               <folding>
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
@@ -92,6 +137,8 @@
                 <element signature="n#div#5;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#6;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#7;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#8;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#9;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -100,10 +147,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/seller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="972">
-              <caret line="480" column="1" lean-forward="true" selection-start-line="480" selection-start-column="1" selection-end-line="480" selection-end-column="1" />
+            <state relative-caret-position="-1486">
+              <caret line="479" column="28" lean-forward="true" selection-start-line="475" selection-start-column="20" selection-end-line="479" selection-end-column="28" />
               <folding>
-                <element signature="e#115#547#0" />
+                <element signature="e#130#924#0" />
                 <element signature="n#!!block;n#toPerson#0" />
                 <element signature="n#!!block;n#getPerson#0" />
                 <element signature="n#!!block;n#modifyPer#0" />
@@ -113,17 +160,124 @@
                 <element signature="n#!!block;n#saveAdd#0" />
                 <element signature="n#!!block;n#resetAdd#0" />
                 <element signature="n#!!block;n#disClick#0" />
-                <element signature="n#!!block;n#f#0" />
-                <element signature="n#!!block;n#f#0" />
+                <element signature="n#!!block;n#toPro#0" />
+                <element signature="n#!!block;n#getPro#0" />
+                <element signature="n#!!block;n#addPro#0" />
+                <element signature="n#!!block;n#modifyPro#0" />
+                <element signature="n#!!block;n#deletePro#0" />
+                <element signature="n#!!block;n#saveAddPro#0" />
+                <element signature="n#!!block;n#cancelPro#0" />
+                <element signature="n#!!block;n#saveModPro#0" />
                 <element signature="n#!!block;n#toOrder#0" />
                 <element signature="n#!!block;n#getOrder#0" />
-                <element signature="n#!!block;n#getComment#0" />
                 <element signature="n#!!block;n#toComment#0" />
                 <element signature="n#!!block;n#addComm#0" />
-                <element signature="n#!!block;n#addComm#1" />
+                <element signature="n#!!block;n#modifyComm#0" />
                 <element signature="n#!!block;n#saveComm#0" />
                 <element signature="n#!!block;n#cancelComm#0" />
+                <element signature="n#!!block;n#quit#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/admin.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="76" column="48" lean-forward="true" selection-start-line="76" selection-start-column="48" selection-end-line="76" selection-end-column="48" />
+              <folding>
+                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#3;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#4;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#form#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#5;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#6;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#7;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#7;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#9;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/admin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="353">
+              <caret line="542" column="22" selection-start-line="542" selection-start-column="22" selection-end-line="542" selection-end-column="22" />
+              <folding>
+                <element signature="e#81#811#0" />
+                <element signature="n#!!block;n#toPerson#0" />
+                <element signature="e#1284#3774#0" />
+                <element signature="e#4751#5664#0" />
+                <element signature="e#5096#5497#0" />
+                <element signature="e#5526#6114#0" />
+                <element signature="n#!!block;n#cancelMod#0" />
+                <element signature="n#!!block;n#addPer#0" />
+                <element signature="e#7923#8506#0" />
+                <element signature="e#6977#7009#0" />
+                <element signature="n#!!block;n#disClick#0" />
+                <element signature="n#!!block;n#toPro#0" />
+                <element signature="n#!!block;n#getPro#0" />
+                <element signature="n#!!block;n#addPro#0" />
+                <element signature="n#!!block;n#modifyPro#0" />
+                <element signature="e#14285#15204#0" />
+                <element signature="n#!!block;n#saveAddPro#0" />
+                <element signature="n#!!block;n#cancelPro#0" />
+                <element signature="n#!!block;n#saveModPro#0" />
+                <element signature="n#!!block;n#toOrder#0" />
+                <element signature="n#!!block;n#getOrder#0" />
+                <element signature="n#!!block;n#toComment#0" />
+                <element signature="n#!!block;n#getComment#0" />
+                <element signature="n#!!block;n#modifyComm#0" />
+                <element signature="n#!!block;n#saveComm#0" />
+                <element signature="n#!!block;n#cancelComm#0" />
+                <element signature="n#!!block;n#quit#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/index.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="267">
+              <caret line="1138" column="1" lean-forward="true" selection-start-line="1138" selection-start-column="1" selection-end-line="1138" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/controller/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="55" column="40" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/log.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="585">
+              <caret line="56" column="50" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
+              <folding>
+                <element signature="e#1042#1892#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/search.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="596">
+              <caret line="60" column="62" lean-forward="true" selection-start-line="60" selection-start-column="62" selection-end-line="60" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -140,46 +294,45 @@
         <option value="Jsp File" />
         <option value="Class" />
         <option value="Arquillian JUnit Test Class" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>user-menu</find>
-      <find>str</find>
-      <find>.Pro</find>
-      <find>person</find>
-      <find>phonenum</find>
-      <find>/seller/</find>
-      <find>$(&quot;.logo a&quot;)</find>
-      <find>$(&quot;.topbar-cart a&quot;)</find>
-      <find>topbar-cart`</find>
-      <find>sellerByUser</find>
-      <find>tranByBuyer</find>
-      <find>selectByPrimaryKeyWithProSeller</find>
-      <find>createTime</find>
-      <find>/transaction</find>
-      <find>$(&quot;.addComment&quot;).css(&quot;display&quot;</find>
-      <find>commentByBuyerId</find>
-      <find>selectByBuyerId</find>
-      <find>selectByPrimaryKey</find>
-      <find>getByProId</find>
-      <find>getByProId`</find>
-      <find>selectBySellerId</find>
-      <find>proid</find>
-      <find>commentContent</find>
-      <find>comminfo</find>
-      <find>modifyPerson</find>
+      <find>/probyname/</find>
+      <find>async</find>
+      <find>fuzzy</find>
+      <find>Example_Where_Clause</find>
+      <find>probyname</find>
+      <find>selectAcPrice</find>
+      <find>subString</find>
+      <find>img.src</find>
+      <find>intro</find>
+      <find>danger</find>
+      <find>btn-comm</find>
+      <find>prointro</find>
+      <find>updateByPrimaryKeySelective</find>
       <find>http://localhost:8080/phstore_war_exploded/product/</find>
-      <find>$(&quot;.list ul&quot;)</find>
-      <find>quit()</find>
-      <find>function quit()</find>
-      <find>addComment</find>
+      <find>commentBySellerId</find>
+      <find>comminfo</find>
+      <find>deleteByPrimaryKey</find>
+      <find>fuzzyQuery</find>
+      <find>allpro</find>
+      <find>FuzzyQuery</find>
+      <find>.indexOf()</find>
+      <find>indexOf</find>
+      <find>已下架</find>
+      <find>str</find>
+      <find>.order</find>
+      <find>$(&quot;.addComment&quot;).css(&quot;display&quot;, &quot;none&quot;);</find>
+      <find>addComm</find>
+      <find>userid</find>
+      <find>order</find>
+      <find>orderli</find>
     </findStrings>
     <replaceStrings>
-      <replace>proPic[0]</replace>
       <replace>proname</replace>
       <replace>intro[0];</replace>
       <replace>&gt;</replace>
@@ -209,6 +362,7 @@
       <replace>$(&quot;</replace>
       <replace>&quot;)</replace>
       <replace />
+      <replace>input</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -217,13 +371,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/js/person.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/bootstrap.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/test.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jf/crud/controller/ParameterController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jf/crud/service/ParameterService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jf/crud/dao/ParameterMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/ParameterMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/RearcameraMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/FrontcameraMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/jf/crud/bean/Frontcamera.java" />
@@ -231,26 +378,18 @@
         <option value="$PROJECT_DIR$/src/main/java/com/jf/crud/bean/Parameter.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/compare.js" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/542d28dd-17d2-4277-8c3d-c47217757656/console_2.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jf/crud/controller/ProductController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jf/crud/service/ProductService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jf/crud/service/AllProService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jf/crud/controller/AllProController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jf/crud/dao/ProductMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jf/crud/dao/AllproMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/ProductMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/AllproMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/shopcart.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/compare.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/detail.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/order.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/person.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/add.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/search.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/search.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/login.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/style.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/log.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/jf/crud/controller/SellerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jf/crud/service/SellerService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jf/crud/dao/SellerMapper.java" />
@@ -264,10 +403,25 @@
         <option value="$PROJECT_DIR$/src/main/java/com/jf/crud/service/CommentService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jf/crud/dao/CommentMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/CommentMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/person.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/seller.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/seller.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jf/crud/bean/Product.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jf/crud/dao/ProductMapperTest.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/index.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/person.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jf/crud/controller/ProductController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jf/crud/service/ProductService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jf/crud/dao/ProductMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/ProductMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jf/crud/controller/AllProController.java" />
+        <option value="$PROJECT_DIR$/mbg.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/search.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/log.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/index.css" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jf/crud/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/admin.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/seller.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/admin.js" />
       </list>
     </option>
   </component>
@@ -320,29 +474,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="phstore" type="58d84e3e:PackageViewProjectNode" />
-              <item name="phstore" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="phstore" type="58d84e3e:PackageViewProjectNode" />
-              <item name="phstore" type="616d4139:PackageViewModuleNode" />
-              <item name="Libraries" type="5c3f07af:PackageViewLibrariesNode" />
-            </path>
-            <path>
-              <item name="phstore" type="58d84e3e:PackageViewProjectNode" />
-              <item name="phstore" type="616d4139:PackageViewModuleNode" />
-              <item name="Libraries" type="5c3f07af:PackageViewLibrariesNode" />
-              <item name="com" type="1f31426a:PackageElementNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -427,9 +558,33 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="phstore" type="58d84e3e:PackageViewProjectNode" />
+              <item name="phstore" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="phstore" type="58d84e3e:PackageViewProjectNode" />
+              <item name="phstore" type="616d4139:PackageViewModuleNode" />
+              <item name="Libraries" type="5c3f07af:PackageViewLibrariesNode" />
+            </path>
+            <path>
+              <item name="phstore" type="58d84e3e:PackageViewProjectNode" />
+              <item name="phstore" type="616d4139:PackageViewModuleNode" />
+              <item name="Libraries" type="5c3f07af:PackageViewLibrariesNode" />
+              <item name="com" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="ChangesTree.GroupingKeys" value="module&#10;directory&#10;repository" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
@@ -438,7 +593,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558022358576" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558171650596" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="XHTML" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
@@ -455,8 +610,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="jf.dao" />
       <recent name="com.jf.crud.dao" />
+      <recent name="jf.dao" />
       <recent name="com.jf.crud.service" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -526,7 +681,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BuyerMapperTest.getByBuyerId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductMapperTest.getByBuyerId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="phstore" />
       <extension name="coverage">
         <pattern>
@@ -535,7 +690,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.jf.crud.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.jf.crud.dao.BuyerMapperTest" />
+      <option name="MAIN_CLASS_NAME" value="com.jf.crud.dao.ProductMapperTest" />
       <option name="METHOD_NAME" value="getByBuyerId" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -736,19 +891,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.MBGTest" />
-      <item itemvalue="JUnit.BuyerMapperTest.getByBuyerId" />
       <item itemvalue="JUnit.UserMapperTest.getByBuyerId" />
       <item itemvalue="JUnit.UserMapperTest.getByBuyerId (1)" />
       <item itemvalue="JUnit.UserMapperTest" />
+      <item itemvalue="JUnit.ProductMapperTest.getByBuyerId" />
       <item itemvalue="Tomcat Server.Tomcat 8.5.39" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProductMapperTest.getByBuyerId" />
         <item itemvalue="JUnit.UserMapperTest.getByBuyerId" />
         <item itemvalue="JUnit.UserMapperTest" />
         <item itemvalue="JUnit.UserMapperTest.getByBuyerId (1)" />
         <item itemvalue="Application.MBGTest" />
-        <item itemvalue="JUnit.BuyerMapperTest.getByBuyerId" />
       </list>
     </recent_temporary>
   </component>
@@ -828,7 +983,8 @@
       <workItem from="1557929278165" duration="8859000" />
       <workItem from="1557971778335" duration="6668000" />
       <workItem from="1557991608611" duration="7578000" />
-      <workItem from="1558057335317" duration="17786000" />
+      <workItem from="1558057335317" duration="47224000" />
+      <workItem from="1558146441061" duration="14538000" />
     </task>
     <task id="LOCAL-00001" summary="更新c3p0到0.9.5.3版本">
       <created>1558063109321</created>
@@ -844,19 +1000,24 @@
       <option name="project" value="LOCAL" />
       <updated>1558071141233</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="卖家界面第一版">
+      <created>1558082641045</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1558082641045</updated>
+    </task>
+    <task id="LOCAL-00004" summary="首页所有商品方法更新">
+      <created>1558117702303</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1558117702304</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserMapperTest_getByBuyerId - 2019.05.13 at 12h 54m 08s.xml">
-      <configuration name="UserMapperTest.getByBuyerId" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserMapperTest - 2019.05.13 at 12h 55m 02s.xml">
-      <configuration name="UserMapperTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserMapperTest_getByBuyerId - 2019.05.13 at 12h 56m 17s.xml">
-      <configuration name="UserMapperTest.getByBuyerId" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="UserMapperTest_getByBuyerId - 2019.05.13 at 12h 59m 27s.xml">
       <configuration name="UserMapperTest.getByBuyerId" configurationId="JUnit" />
     </history-entry>
@@ -878,9 +1039,18 @@
     <history-entry file="UserMapperTest_getByBuyerId - 2019.05.13 at 13h 16m 31s.xml">
       <configuration name="UserMapperTest.getByBuyerId" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ProductMapperTest_getByBuyerId - 2019.05.17 at 23h 17m 25s.xml">
+      <configuration name="ProductMapperTest.getByBuyerId" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProductMapperTest_getByBuyerId - 2019.05.17 at 23h 19m 12s.xml">
+      <configuration name="ProductMapperTest.getByBuyerId" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProductMapperTest_getByBuyerId - 2019.05.17 at 23h 20m 58s.xml">
+      <configuration name="ProductMapperTest.getByBuyerId" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="545487000" />
+    <option name="totallyTimeSpent" value="589463000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -905,15 +1075,15 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info id="JavaEE:App" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.329429" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.25501114" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32850778" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3585746" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4568082" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.329429" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.329429" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.32925472" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32850778" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32850778" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.329429" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32956153" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
@@ -934,7 +1104,7 @@
       <window_info anchor="right" id="Bean Validation" order="10" weight="0.3297587" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19829424" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.19829424" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -945,14 +1115,14 @@
       <window_info id="JavaEE:App" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329429" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.25501114" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32516703" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4568082" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.329429" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.329429" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.32925472" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32850778" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32850778" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.329429" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32956153" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
@@ -989,7 +1159,21 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="更新c3p0到0.9.5.3版本" />
     <MESSAGE value="1.更新c3p0到0.9.5.3版本&#10;2.添加根据sellerId获取订单的接口" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.更新c3p0到0.9.5.3版本&#10;2.添加根据sellerId获取订单的接口" />
+    <MESSAGE value="卖家界面第一版" />
+    <MESSAGE value="首页所有商品方法更新" />
+    <option name="LAST_COMMIT_MESSAGE" value="首页所有商品方法更新" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/admin.html</url>
+          <line>178</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1005,263 +1189,10 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ParameterMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/order.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="679">
-          <caret line="136" selection-start-line="136" selection-end-line="136" />
-          <folding>
-            <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
-            <element signature="n#association#0;n#resultMap#1;n#mapper#0;n#!!top" />
-            <element signature="n#association#1;n#resultMap#1;n#mapper#0;n#!!top" />
-            <element signature="n#association#2;n#resultMap#1;n#mapper#0;n#!!top" />
-            <element signature="n#association#3;n#resultMap#1;n#mapper#0;n#!!top" />
-            <element signature="n#association#4;n#resultMap#1;n#mapper#0;n#!!top" />
-            <element signature="n#association#5;n#resultMap#1;n#mapper#0;n#!!top" />
-            <element signature="n#association#6;n#resultMap#1;n#mapper#0;n#!!top" />
-            <element signature="n#association#7;n#resultMap#1;n#mapper#0;n#!!top" />
-            <element signature="n#association#8;n#resultMap#1;n#mapper#0;n#!!top" />
-            <element signature="n#sql#0;n#mapper#0;n#!!top" />
-            <element signature="n#sql#1;n#mapper#0;n#!!top" />
-            <element signature="n#sql#2;n#mapper#0;n#!!top" />
-            <element signature="n#sql#3;n#mapper#0;n#!!top" />
-            <element signature="n#select#0;n#mapper#0;n#!!top" />
-            <element signature="n#select#1;n#mapper#0;n#!!top" />
-            <element signature="n#delete#0;n#mapper#0;n#!!top" />
-            <element signature="n#delete#1;n#mapper#0;n#!!top" />
-            <element signature="n#insert#0;n#mapper#0;n#!!top" />
-            <element signature="n#insert#1;n#mapper#0;n#!!top" />
-            <element signature="n#select#2;n#mapper#0;n#!!top" />
-            <element signature="n#update#0;n#mapper#0;n#!!top" />
-            <element signature="n#update#1;n#mapper#0;n#!!top" />
-            <element signature="n#update#2;n#mapper#0;n#!!top" />
-            <element signature="n#update#3;n#mapper#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/controller/ParameterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="42" column="40" lean-forward="true" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/compare.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5004">
-          <caret line="139" column="40" selection-start-line="139" selection-start-column="40" selection-end-line="139" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://542d28dd-17d2-4277-8c3d-c47217757656/schema/phstore_crud/table/product">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://542d28dd-17d2-4277-8c3d-c47217757656/schema/phstore_crud/table/product.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/bean/ProductExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="774" column="35" lean-forward="true" selection-start-line="774" selection-start-column="35" selection-end-line="774" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/542d28dd-17d2-4277-8c3d-c47217757656/console_2.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="47" selection-start-column="47" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/service/ProductService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="16" column="52" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/dao/ProductMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/dao/AllproMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/service/AllProService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/controller/AllProController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="40" column="62" lean-forward="true" selection-start-line="40" selection-start-column="62" selection-end-line="40" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ProductMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="88" selection-start-line="88" selection-end-line="88" />
-          <folding>
-            <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
-            <element signature="n#sql#0;n#mapper#0;n#!!top" />
-            <element signature="n#sql#1;n#mapper#0;n#!!top" />
-            <element signature="n#sql#2;n#mapper#0;n#!!top" />
-            <element signature="n#select#0;n#mapper#0;n#!!top" />
-            <element signature="n#select#1;n#mapper#0;n#!!top" />
-            <element signature="n#select#2;n#mapper#0;n#!!top" />
-            <element signature="n#select#3;n#mapper#0;n#!!top" />
-            <element signature="n#delete#0;n#mapper#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/AllproMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="95" column="40" lean-forward="true" selection-start-line="95" selection-start-column="40" selection-end-line="95" selection-end-column="40" />
-          <folding>
-            <element signature="n#sql#0;n#mapper#0;n#!!top" />
-            <element signature="n#sql#1;n#mapper#0;n#!!top" />
-            <element signature="n#select#0;n#mapper#0;n#!!top" />
-            <element signature="n#select#1;n#mapper#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/detail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="12" column="5" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="12" selection-end-column="5" />
-          <folding>
-            <element signature="n#!!block;n#addPro#0" />
-            <element signature="n#!!block;n#changeVer#0" />
-            <element signature="n#!!block;n#changeCol#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="44" column="70" selection-start-line="44" selection-start-column="70" selection-end-line="44" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/order.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="43" column="70" selection-start-line="43" selection-start-column="70" selection-end-line="43" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="43" column="70" selection-start-line="43" selection-start-column="70" selection-end-line="43" selection-end-column="70" />
-          <folding>
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#4;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/compare.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="43" column="70" selection-start-line="43" selection-start-column="70" selection-end-line="43" selection-end-column="70" />
-          <folding>
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/shopcart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="43" column="70" selection-start-line="43" selection-start-column="70" selection-end-line="43" selection-end-column="70" />
-          <folding>
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/shopcart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="17" column="45" lean-forward="true" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/search.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/search.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="98" column="60" selection-start-line="98" selection-start-column="50" selection-end-line="98" selection-end-column="60" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#4;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="669">
-          <caret line="78" column="16" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
-          <folding>
-            <element signature="n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="200" column="23" lean-forward="true" selection-start-line="200" selection-start-column="23" selection-end-line="200" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/person.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="47" column="22" lean-forward="true" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#3;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="290">
+          <caret line="37" column="60" lean-forward="true" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="60" />
         </state>
       </provider>
     </entry>
@@ -1279,156 +1210,207 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="28" column="48" lean-forward="true" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/.idea/artifacts/phstore_war_exploded.xml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/controller/BuyerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-540">
-          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SellerMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="94" column="11" selection-start-line="94" selection-start-column="11" selection-end-line="94" selection-end-column="11" />
-          <folding>
-            <element signature="n#sql#0;n#mapper#0;n#!!top" />
-            <element signature="n#sql#1;n#mapper#0;n#!!top" />
-            <element signature="n#sql#2;n#mapper#0;n#!!top" />
-            <element signature="n#select#0;n#mapper#0;n#!!top" />
-            <element signature="n#select#1;n#mapper#0;n#!!top" />
-            <element signature="n#select#2;n#mapper#0;n#!!top" />
-            <element signature="n#delete#0;n#mapper#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/dao/SellerMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="22" column="25" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/service/SellerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-33">
-          <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/controller/SellerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="39" column="42" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="106" column="17" lean-forward="true" selection-start-line="106" selection-start-column="17" selection-end-line="106" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/service/TransactionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/dao/TransactionMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="26" column="36" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="36" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/controller/TransactionController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
+        <state relative-caret-position="2232">
           <caret line="62" column="42" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TransactionMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="171" column="44" lean-forward="true" selection-start-line="171" selection-start-column="44" selection-end-line="171" selection-end-column="44" />
-          <folding>
-            <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
-            <element signature="n#resultMap#1;n#mapper#0;n#!!top" />
-            <element signature="n#resultMap#2;n#mapper#0;n#!!top" />
-            <element signature="n#sql#0;n#mapper#0;n#!!top" />
-            <element signature="n#sql#1;n#mapper#0;n#!!top" />
-            <element signature="n#sql#2;n#mapper#0;n#!!top" />
-            <element signature="n#sql#3;n#mapper#0;n#!!top" />
-            <element signature="n#sql#4;n#mapper#0;n#!!top" />
-            <element signature="n#select#0;n#mapper#0;n#!!top" />
-            <element signature="n#select#1;n#mapper#0;n#!!top" />
-            <element signature="n#delete#0;n#mapper#0;n#!!top" />
-            <element signature="n#delete#1;n#mapper#0;n#!!top" />
-            <element signature="n#insert#0;n#mapper#0;n#!!top" />
-            <element signature="n#insert#1;n#mapper#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/controller/ShopcartController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="59" column="35" lean-forward="true" selection-start-line="56" selection-start-column="8" selection-end-line="59" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/controller/ProductController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1204">
-          <caret line="56" column="37" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CommentMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="114" column="11" lean-forward="true" selection-start-line="114" selection-start-column="11" selection-end-line="114" selection-end-column="11" />
-          <folding>
-            <element signature="n#sql#0;n#mapper#0;n#!!top" />
-            <element signature="n#sql#1;n#mapper#0;n#!!top" />
-            <element signature="n#sql#2;n#mapper#0;n#!!top" />
-            <element signature="n#select#0;n#mapper#0;n#!!top" />
-            <element signature="n#select#1;n#mapper#0;n#!!top" />
-            <element signature="n#select#2;n#mapper#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/service/CommentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="26" column="56" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/dao/CommentMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
+        <state relative-caret-position="936">
           <caret line="26" column="28" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/dao/TransactionMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="936">
+          <caret line="26" column="36" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/service/CommentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="936">
+          <caret line="26" column="56" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/service/TransactionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TransactionMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5544">
+          <caret line="154" column="37" lean-forward="true" selection-start-line="154" selection-start-column="37" selection-end-line="154" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/com/jf/crud/service/TransactionService.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#1669#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/mapper/TransactionMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/controller/TransactionController.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#3179#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/dao/TransactionMapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#1137#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/service/TransactionService.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#1669#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/phstore/WEB-INF/classes/mapper/TransactionMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="106" column="17" selection-start-line="106" selection-start-column="17" selection-end-line="106" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/com/jf/crud/dao/TransactionMapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#1137#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/com/jf/crud/controller/TransactionController.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#3179#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/bean/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2358">
+          <caret line="78" column="16" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
+          <folding>
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ParameterMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="199" column="29" selection-start-line="199" selection-start-column="14" selection-end-line="199" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="123" column="11" lean-forward="true" selection-start-line="123" selection-start-column="11" selection-end-line="123" selection-end-column="11" />
+          <folding>
+            <element signature="n#sql#0;n#mapper#0;n#!!top" />
+            <element signature="n#sql#1;n#mapper#0;n#!!top" />
+            <element signature="n#sql#2;n#mapper#0;n#!!top" />
+            <element signature="n#sql#3;n#mapper#0;n#!!top" />
+            <element signature="n#select#0;n#mapper#0;n#!!top" />
+            <element signature="n#select#1;n#mapper#0;n#!!top" />
+            <element signature="n#select#2;n#mapper#0;n#!!top" />
+            <element signature="n#select#3;n#mapper#0;n#!!top" />
+            <element signature="n#delete#0;n#mapper#0;n#!!top" />
+            <element signature="n#delete#1;n#mapper#0;n#!!top" />
+            <element signature="n#insert#0;n#mapper#0;n#!!top" />
+            <element signature="n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#select#4;n#mapper#0;n#!!top" />
+            <element signature="n#update#0;n#mapper#0;n#!!top" />
+            <element signature="n#update#1;n#mapper#0;n#!!top" />
+            <element signature="n#update#2;n#mapper#0;n#!!top" />
+            <element signature="n#update#3;n#mapper#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/controller/BuyerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/controller/CommentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="48" column="46" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CommentMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3870">
+          <caret line="114" column="11" selection-start-line="114" selection-start-column="11" selection-end-line="114" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/person.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="7" column="69" lean-forward="true" selection-start-line="7" selection-start-column="69" selection-end-line="7" selection-end-column="69" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/person.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="312" column="8" selection-start-line="312" selection-start-column="8" selection-end-line="312" selection-end-column="8" />
+        <state relative-caret-position="-198">
+          <caret line="272" column="84" lean-forward="true" selection-start-line="272" selection-start-column="84" selection-end-line="272" selection-end-column="84" />
           <folding>
             <element signature="e#115#547#0" />
             <element signature="n#!!block;n#toPerson#0" />
@@ -1442,60 +1424,118 @@
             <element signature="n#!!block;n#disClick#0" />
             <element signature="n#!!block;n#toOrder#0" />
             <element signature="n#!!block;n#getOrder#0" />
-            <element signature="n#!!block;n#getComment#0" />
             <element signature="n#!!block;n#toComment#0" />
+            <element signature="n#!!block;n#addComm#0" />
+            <element signature="n#!!block;n#saveComm#0" />
+            <element signature="n#!!block;n#cancelComm#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/controller/CommentController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/service/ProductService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="72" column="75" selection-start-line="72" selection-start-column="72" selection-end-line="72" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/seller.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="9" column="66" selection-start-line="9" selection-start-column="66" selection-end-line="9" selection-end-column="66" />
+        <state relative-caret-position="219">
+          <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
           <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#3;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#4;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#5;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#6;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#7;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#713#714#0" expanded="true" />
+            <element signature="e#777#778#0" expanded="true" />
+            <element signature="e#1147#1148#0" expanded="true" />
+            <element signature="e#1209#1210#0" expanded="true" />
+            <element signature="e#1258#1259#0" expanded="true" />
+            <element signature="e#1324#1325#0" expanded="true" />
+            <element signature="e#1371#1372#0" expanded="true" />
+            <element signature="e#1426#1427#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/order.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/dao/ProductMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="50" lean-forward="true" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+        <state relative-caret-position="255">
+          <caret line="20" column="41" lean-forward="true" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/log.js">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/AllproMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="33" column="65" selection-start-line="33" selection-start-column="58" selection-end-line="33" selection-end-column="65" />
+        <state relative-caret-position="996">
+          <caret line="95" column="36" selection-start-line="95" selection-start-column="20" selection-end-line="95" selection-end-column="36" />
+          <folding>
+            <element signature="n#sql#0;n#mapper#0;n#!!top" />
+            <element signature="n#sql#1;n#mapper#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/dao/AllproMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="20" column="27" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/service/AllProService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/controller/AllProController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/dao/ProductMapperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mbg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="43" column="77" selection-start-line="43" selection-start-column="77" selection-end-line="43" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ProductMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="75" column="8" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
+          <folding>
+            <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
+            <element signature="n#sql#0;n#mapper#0;n#!!top" />
+            <element signature="n#sql#1;n#mapper#0;n#!!top" />
+            <element signature="n#select#0;n#mapper#0;n#!!top" />
+            <element signature="n#select#1;n#mapper#0;n#!!top" />
+            <element signature="n#select#2;n#mapper#0;n#!!top" />
+            <element signature="n#select#3;n#mapper#0;n#!!top" />
+            <element signature="n#select#4;n#mapper#0;n#!!top" />
+            <element signature="n#delete#0;n#mapper#0;n#!!top" />
+            <element signature="n#delete#1;n#mapper#0;n#!!top" />
+            <element signature="n#insert#0;n#mapper#0;n#!!top" />
+            <element signature="n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#trim#0;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#select#5;n#mapper#0;n#!!top" />
+            <element signature="n#update#0;n#mapper#0;n#!!top" />
+            <element signature="n#update#1;n#mapper#0;n#!!top" />
+            <element signature="n#update#2;n#mapper#0;n#!!top" />
+            <element signature="n#update#3;n#mapper#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="152" column="39" lean-forward="true" selection-start-line="152" selection-start-column="39" selection-end-line="152" selection-end-column="39" />
+        <state relative-caret-position="936">
+          <caret line="91" column="52" lean-forward="true" selection-start-line="91" selection-start-column="52" selection-end-line="91" selection-end-column="52" />
           <folding>
             <element signature="e#76#1947#0" />
-            <element signature="n#!!block;n#toPn#0" />
+            <element signature="n#!!block;n#quit#0" />
             <element signature="n#!!block;n#over#0" />
             <element signature="n#!!block;n#cart#0" />
             <element signature="n#!!block;n#addComp#0" />
@@ -1507,12 +1547,114 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/search.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="596">
+          <caret line="60" column="62" lean-forward="true" selection-start-line="60" selection-start-column="62" selection-end-line="60" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-432" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/seller.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="632">
+          <caret line="181" column="7" lean-forward="true" selection-start-line="181" selection-start-column="7" selection-end-line="181" selection-end-column="7" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#3;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#4;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#5;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#6;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#7;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#8;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#9;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/log.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="56" column="50" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
+          <folding>
+            <element signature="e#1042#1892#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="1138" column="1" lean-forward="true" selection-start-line="1138" selection-start-column="1" selection-end-line="1138" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/controller/ProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="87" column="5" lean-forward="true" selection-start-line="76" selection-start-column="4" selection-end-line="87" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="55" column="40" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="76" column="48" lean-forward="true" selection-start-line="76" selection-start-column="48" selection-end-line="76" selection-end-column="48" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#3;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#4;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#form#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#5;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#6;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#7;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#7;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#9;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/compare.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="43" column="61" selection-start-line="43" selection-start-column="61" selection-end-line="43" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/seller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="972">
-          <caret line="480" column="1" lean-forward="true" selection-start-line="480" selection-start-column="1" selection-end-line="480" selection-end-column="1" />
+        <state relative-caret-position="-1486">
+          <caret line="479" column="28" lean-forward="true" selection-start-line="475" selection-start-column="20" selection-end-line="479" selection-end-column="28" />
           <folding>
-            <element signature="e#115#547#0" />
+            <element signature="e#130#924#0" />
             <element signature="n#!!block;n#toPerson#0" />
             <element signature="n#!!block;n#getPerson#0" />
             <element signature="n#!!block;n#modifyPer#0" />
@@ -1522,24 +1664,59 @@
             <element signature="n#!!block;n#saveAdd#0" />
             <element signature="n#!!block;n#resetAdd#0" />
             <element signature="n#!!block;n#disClick#0" />
-            <element signature="n#!!block;n#f#0" />
-            <element signature="n#!!block;n#f#0" />
+            <element signature="n#!!block;n#toPro#0" />
+            <element signature="n#!!block;n#getPro#0" />
+            <element signature="n#!!block;n#addPro#0" />
+            <element signature="n#!!block;n#modifyPro#0" />
+            <element signature="n#!!block;n#deletePro#0" />
+            <element signature="n#!!block;n#saveAddPro#0" />
+            <element signature="n#!!block;n#cancelPro#0" />
+            <element signature="n#!!block;n#saveModPro#0" />
             <element signature="n#!!block;n#toOrder#0" />
             <element signature="n#!!block;n#getOrder#0" />
-            <element signature="n#!!block;n#getComment#0" />
             <element signature="n#!!block;n#toComment#0" />
             <element signature="n#!!block;n#addComm#0" />
-            <element signature="n#!!block;n#addComm#1" />
+            <element signature="n#!!block;n#modifyComm#0" />
             <element signature="n#!!block;n#saveComm#0" />
             <element signature="n#!!block;n#cancelComm#0" />
+            <element signature="n#!!block;n#quit#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/index.css">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/admin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="1221" column="25" selection-start-line="1221" selection-start-column="25" selection-end-line="1221" selection-end-column="25" />
+        <state relative-caret-position="353">
+          <caret line="542" column="22" selection-start-line="542" selection-start-column="22" selection-end-line="542" selection-end-column="22" />
+          <folding>
+            <element signature="e#81#811#0" />
+            <element signature="n#!!block;n#toPerson#0" />
+            <element signature="e#1284#3774#0" />
+            <element signature="e#4751#5664#0" />
+            <element signature="e#5096#5497#0" />
+            <element signature="e#5526#6114#0" />
+            <element signature="n#!!block;n#cancelMod#0" />
+            <element signature="n#!!block;n#addPer#0" />
+            <element signature="e#7923#8506#0" />
+            <element signature="e#6977#7009#0" />
+            <element signature="n#!!block;n#disClick#0" />
+            <element signature="n#!!block;n#toPro#0" />
+            <element signature="n#!!block;n#getPro#0" />
+            <element signature="n#!!block;n#addPro#0" />
+            <element signature="n#!!block;n#modifyPro#0" />
+            <element signature="e#14285#15204#0" />
+            <element signature="n#!!block;n#saveAddPro#0" />
+            <element signature="n#!!block;n#cancelPro#0" />
+            <element signature="n#!!block;n#saveModPro#0" />
+            <element signature="n#!!block;n#toOrder#0" />
+            <element signature="n#!!block;n#getOrder#0" />
+            <element signature="n#!!block;n#toComment#0" />
+            <element signature="n#!!block;n#getComment#0" />
+            <element signature="n#!!block;n#modifyComm#0" />
+            <element signature="n#!!block;n#saveComm#0" />
+            <element signature="n#!!block;n#cancelComm#0" />
+            <element signature="n#!!block;n#quit#0" />
+          </folding>
         </state>
       </provider>
     </entry>

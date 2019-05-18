@@ -89,6 +89,56 @@
                     </div>
                     <div class="Pro">
                         <h1>商品信息</h1>
+                        <a onclick="addPro()" class="btn btn-shop btn-shop1">添加商品</a>
+                        <div class="proList"></div>
+                    </div>
+                    <div class="addPro">
+                        <h1>请添加商品信息</h1>
+                        <form class="form-horizontal AddInfo" role="form">
+                            <div class="input-group">
+                                <input type="text" class="Input" placeholder="商品名称" id="inProname" autocomplete="off" />
+                            </div>
+                            <div class="input-group">
+                                <input type="text" class="Input" placeholder="商品价格" id="inPrice" autocomplete="off" />
+                            </div>
+                            <div class="input-group">
+                                <input type="text" class="Input" placeholder="商品折扣" id="inDiscount" autocomplete="off" />
+                            </div>
+                            <div class="input-group">
+                                <input type="text" class="Input" placeholder="商品版本" id="inVersion" autocomplete="off" />
+                            </div>
+                            <textarea id="inIntro" class="goods-comment-content" placeholder="商品介绍"></textarea>
+                            <textarea id="inPicture" class="goods-comment-content" placeholder="商品图片"></textarea>
+                            <div class="input-group">
+                                <input type="text" class="Input" placeholder="商品颜色" id="inColor" autocomplete="off" />
+                            </div>
+                        </form>
+                        <button class="btn btn-primary" onclick="saveAddPro()">保存</button>
+                        <button class="btn btn-default" onclick="cancelPro()">取消</button>
+                    </div>
+                    <div class="modifyPro">
+                        <h1>修改商品信息</h1>
+                        <form class="form-horizontal modifyInfo" role="form">
+                            <div class="input-group">
+                                <input type="text" class="Input" placeholder="商品名称" id="inputProname" autocomplete="off" />
+                            </div>
+                            <div class="input-group">
+                                <input type="text" class="Input" placeholder="商品价格" id="inputPrice" autocomplete="off" />
+                            </div>
+                            <div class="input-group">
+                                <input type="text" class="Input" placeholder="商品折扣" id="inputDiscount" autocomplete="off" />
+                            </div>
+                            <div class="input-group">
+                                <input type="text" class="Input" placeholder="商品版本" id="inputVersion" autocomplete="off" />
+                            </div>
+                            <textarea id="inputIntro" class="goods-comment-content" placeholder="商品介绍"></textarea>
+                            <textarea id="inputPicture" class="goods-comment-content" placeholder="商品图片"></textarea>
+                            <div class="input-group">
+                                <input type="text" class="Input" placeholder="商品颜色" id="inputColor" autocomplete="off" />
+                            </div>
+                        </form>
+                        <button class="btn btn-primary" onclick="saveModPro()">保存</button>
+                        <button class="btn btn-default" onclick="cancelPro()">取消</button>
                     </div>
                     <div class="order">
                         <h1>订单信息</h1>

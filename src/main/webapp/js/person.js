@@ -244,30 +244,33 @@ function getComment() {
                 }
                 for (i in pros) {
                     $.ajax({
-                        url: "http://localhost:8080/phstore_war_exploded/comment/" + pros[i],
-                        data: {},
+                        url: "http://localhost:8080/phstore_war_exploded/commentByBuyerId",
+                        data: {
+                            proid: pros[i],
+                            buyerid: buyerId
+                        },
                         type: "GET",
                         async: false,
                         success: function (response) {
                             var data = response.extend.comment;
-                            if (data.length === 0) {
+                            if (data === null) {
                                 $(".comment").find("div").eq(i).append($("<a>评价</a>")
                                     .attr("onclick", "addComm(this)")
                                     .attr("proid", pros[i])
                                     .attr("class", "btn btn-shop btn-shop1 btn-comm"));
                             } else {
-                                if (data[0].apply === "") {
+                                if (data.apply === "") {
                                     $(".comment").find("div").eq(i)
                                         .append($("<br>"))
                                         .append($("<h4>评价详情</h4>"))
-                                        .append($("<span></span>").text("买家评价："+data[0].comminfo));
+                                        .append($("<span></span>").text("买家评价："+data.comminfo));
                                 } else {
                                     $(".comment").find("div").eq(i)
                                         .append($("<br>"))
                                         .append($("<h4>评价详情</h4>"))
-                                        .append($("<span></span>").text("买家评价："+data[0].comminfo))
+                                        .append($("<span></span>").text("买家评价："+data.comminfo))
                                         .append($("<br>"))
-                                        .append($("<span></span>").text("卖家回复："+data[0].apply));
+                                        .append($("<span></span>").text("卖家回复："+data.apply));
                                 }
                             }
                         }, error: function () {

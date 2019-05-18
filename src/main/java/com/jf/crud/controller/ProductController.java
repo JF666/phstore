@@ -40,6 +40,41 @@ public class ProductController {
         return Msg.success().add("pageInfo", products);
     }
     /**
+     * 模糊查询
+     */
+    @RequestMapping(value = "/FuzzyQuery")
+    @ResponseBody
+    public Msg fuzzyQuery(@RequestParam(value = "pn",defaultValue = "1")Integer pn,String key) {
+        PageHelper.startPage(pn, 10);
+        List<Product> products = productService.fuzzyQuery(key);
+        PageInfo page = new PageInfo(products, 5);
+        return Msg.success().add("pageInfo", page);
+    }
+    /**
+     * 获取所有最低价信息
+     */
+    @RequestMapping(value = "/getAcPrice")
+    @ResponseBody
+    public Msg getAcPrice() {
+        List<Product> products = productService.getAcPrice();
+        return Msg.success().add("products", products);
+    }
+    /**
+     * 获取所有主页列表
+     */
+    @RequestMapping(value = "/getByName")
+    @ResponseBody
+    public Msg getByName(Integer pn, String pronames) {
+        PageHelper.startPage(pn, 10);
+        String[] str_pronames = pronames.split("-");
+        List<Product> products = new ArrayList<>();
+        for (String string : str_pronames) {
+            products.add(productService.getByProName(string).get(0));
+        }
+        PageInfo page = new PageInfo(products, 5);
+        return Msg.success().add("pageInfo", page);
+    }
+    /**
      * 新增一条product记录
      */
     @RequestMapping(value = "/productInsert",method = RequestMethod.POST)

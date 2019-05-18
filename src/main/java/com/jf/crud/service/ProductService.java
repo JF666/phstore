@@ -17,6 +17,14 @@ public class ProductService {
         List<Product> products = productMapper.selectByExample(null);
         return products;
     }
+    public List<Product> fuzzyQuery(String key) {
+        List<Product> products = productMapper.fuzzyQuery(key);
+        return products;
+    }
+    public List<Product> getAcPrice() {
+        List<Product> products = productMapper.selectAcPrice();
+        return products;
+    }
     public Boolean insertProduct(Product product) {
         return productMapper.insertSelective(product)!=0;
     }

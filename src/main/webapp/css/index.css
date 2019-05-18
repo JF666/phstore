@@ -1096,10 +1096,13 @@ h3 {
     text-decoration: none;
     cursor: pointer;
 }
-.Pro {
+.Pro,.addPro,.modifyPro {
     display: none;
 }
-.order {
+.addPro textarea,.modifyPro textarea {
+    font-size: 16px;
+}
+.order,.modifyOrder {
     display: none;
 }
 .comment {
@@ -1134,7 +1137,7 @@ h3 {
     font-size: 18px;
     font-weight: bold;
 }
-.orderList {
+.orderList,.PerList {
     border: 1px solid #b0b0b0;
     width: 100%;
     margin: 10px 0;
@@ -1162,6 +1165,25 @@ h3 {
     text-align: center;
     display: inline-block;
 }
+.ProList {
+    border: 1px solid #b0b0b0;
+    width: 100%;
+    margin: 10px 0;
+    padding: 15px;
+    height: auto;
+}
+.ProList span {
+    width: 100%;
+    text-align: left;
+    font-weight: bold;
+}
+.ProList span p {
+    width: auto;
+    margin: 0;
+    font-weight: normal;
+    word-wrap: break-word;
+    display: block;
+}
 .emptyOrder {
     width: 100%;
     text-align: center;
@@ -1173,6 +1195,13 @@ h3 {
     width: 15%;
     margin-bottom: 0;
     margin-left: 10%;
+    height: 35px;
+    line-height: 23px;
+}
+.btn-Pro {
+    width: 25%;
+    margin-bottom: 0;
+    margin-right: 5%;
     height: 35px;
     line-height: 23px;
 }

@@ -42,7 +42,6 @@
         <table tableName="buyer" domainObjectName="Buyer"></table>
         <!--<table tableName="seller" domainObjectName="Seller"></table>-->
         <!--<table tableName="product" domainObjectName="Product"></table>-->
-        <!--<table tableName="allpro" domainObjectName="Allpro"></table>-->
         <!--<table tableName="parameter" domainObjectName="Parameter"></table>-->
         <!--<table tableName="comment" domainObjectName="Comment"></table>-->
         <!--<table tableName="transaction" domainObjectName="Transaction"></table>-->

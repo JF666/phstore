@@ -7,7 +7,7 @@
     <meta http-equiv="Access-Control-Allow-Origin" content="*">
     <script type="text/javaScript" src="js/jquery-3.4.1.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="js/seller.js"></script>
+    <script type="text/javascript" src="js/admin.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/iconfont.css" />
@@ -27,10 +27,10 @@
                                 <span class="iconfont icon-xialajiantou"></span>
                             </a>
                             <ul class="user-menu">
-                                <li><a rel="nofollow" onclick="toPerson()">商家信息</a></li>
-                                <li><a rel="nofollow" onclick="toPro()">商品信息</a></li>
-                                <li><a rel="nofollow" onclick="toOrder()">订单信息</a></li>
-                                <li><a rel="nofollow" onclick="toComment()">评价信息</a></li>
+                                <li><a rel="nofollow" onclick="toPerson()">用户管理</a></li>
+                                <li><a rel="nofollow" onclick="toPro()">商品管理</a></li>
+                                <li><a rel="nofollow" onclick="toOrder()">订单管理</a></li>
+                                <li><a rel="nofollow" onclick="toComment()">评价管理</a></li>
                                 <li><a rel="nofollow" onclick="quit();return false;">退出登录</a></li>
                             </ul>
                         </span>
@@ -63,37 +63,49 @@
             <div class="col-md-9 column">
                 <div class="content">
                     <div class="person">
-                        <h1>商家信息</h1>
-                        <label>厂商名称：</label><p class="company"></p>
-                        <a onclick="modifyPer()">修改商家信息></a>
+                        <h1>用户管理</h1>
                     </div>
                     <div class="addPerson">
-                        <h1>请添加商家信息</h1>
+                        <h1>添加用户</h1>
                         <form class="form-horizontal AddInfo" role="form">
                             <div class="input-group">
-                                <input type="text" class="Input" placeholder="厂商名称" id="inCompany" autocomplete="off" />
+                                <input type="text" class="Input" placeholder="用户名" id="inUsername" autocomplete="off" />
                             </div>
+                            <div class="input-group">
+                                <input type="text" class="Input" placeholder="密码" id="inPassword" autocomplete="off" />
+                            </div>
+                            <select id="inAuth">
+                                <option value="1">买家</option>
+                                <option value="2">卖家</option>
+                            </select>
                         </form>
                         <button class="btn btn-primary" onclick="saveAdd()">保存</button>
                         <button class="btn btn-default" onclick="resetAdd()">重置</button>
                     </div>
                     <div class="modifyPerson">
-                        <h1>修改商家信息</h1>
+                        <h1>修改用户</h1>
                         <form class="form-horizontal modifyInfo" role="form">
                             <div class="input-group">
-                                <input type="text" class="Input" placeholder="厂商名称" id="inputCompany" autocomplete="off" />
+                                <input type="text" class="Input" placeholder="用户名" id="inputUsername" autocomplete="off" />
                             </div>
+                            <div class="input-group">
+                                <input type="text" class="Input" placeholder="密码" id="inputPassword" autocomplete="off" />
+                            </div>
+                            <select id="inputAuth">
+                                <option value="1">买家</option>
+                                <option value="2">卖家</option>
+                            </select>
                         </form>
                         <button class="btn btn-primary" onclick="saveMod()">保存</button>
                         <button class="btn btn-default" onclick="cancelMod()">取消</button>
                     </div>
                     <div class="Pro">
-                        <h1>商品信息</h1>
+                        <h1>商品管理</h1>
                         <a onclick="addPro()" class="btn btn-shop btn-shop1">添加商品</a>
                         <div class="proList"></div>
                     </div>
                     <div class="addPro">
-                        <h1>请添加商品信息</h1>
+                        <h1>添加商品</h1>
                         <form class="form-horizontal AddInfo" role="form">
                             <div class="input-group">
                                 <input type="text" class="Input" placeholder="商品名称" id="inProname" autocomplete="off" />
@@ -117,7 +129,7 @@
                         <button class="btn btn-default" onclick="cancelPro()">取消</button>
                     </div>
                     <div class="modifyPro">
-                        <h1>修改商品信息</h1>
+                        <h1>修改商品</h1>
                         <form class="form-horizontal modifyInfo" role="form">
                             <div class="input-group">
                                 <input type="text" class="Input" placeholder="商品名称" id="inputProname" autocomplete="off" />
@@ -141,24 +153,34 @@
                         <button class="btn btn-default" onclick="cancelPro()">取消</button>
                     </div>
                     <div class="order">
-                        <h1>订单信息</h1>
+                        <h1>订单管理</h1>
+                    </div>
+                    <div class="modifyOrder">
+                        <h1>修改订单</h1>
+                        <form class="form-horizontal modifyInfo" role="form">
+                            <!--<div class="input-group">-->
+                                <!--<input type="text" class="Input" placeholder="商品名称" id="iProname" autocomplete="off" />-->
+                            <!--</div>-->
+                            <!--<div class="input-group">-->
+                                <!--<input type="text" class="Input" placeholder="商品价格" id="iPrice" autocomplete="off" />-->
+                            <!--</div>-->
+                            <!--<div class="input-group">-->
+                                <!--<input type="text" class="Input" placeholder="商品折扣" id="iDiscount" autocomplete="off" />-->
+                            <!--</div>-->
+                            <!--<div class="input-group">-->
+                                <!--<input type="text" class="Input" placeholder="商品版本" id="iVersion" autocomplete="off" />-->
+                            <!--</div>-->
+                            <!--<textarea id="iIntro" class="goods-comment-content" placeholder="商品介绍"></textarea>-->
+                            <!--<textarea id="iPicture" class="goods-comment-content" placeholder="商品图片"></textarea>-->
+                            <!--<div class="input-group">-->
+                                <!--<input type="text" class="Input" placeholder="商品颜色" id="iColor" autocomplete="off" />-->
+                            <!--</div>-->
+                        </form>
+                        <button class="btn btn-primary" onclick="saveModOrder()">保存</button>
+                        <button class="btn btn-default" onclick="cancelOrder()">取消</button>
                     </div>
                     <div class="comment">
-                        <h1>评价信息</h1>
-                    </div>
-                    <div class="addComment">
-                        <h1>回复评价</h1>
-                        <div class="row clearfix">
-                            <div class="col-md-4 column commentPro">
-                            </div>
-                            <div class="col-md-8 column commentInfo">
-                                <textarea id="commentContent" name="" class="goods-comment-content">写点感谢客户的话吧</textarea>
-                                <div class="comment-answer-btn">
-                                    <button class="btn btn-primary" onclick="saveComm(this)">发表评价</button>
-                                    <button class="btn btn-default" onclick="cancelComm()">暂不评价</button>
-                                </div>
-                            </div>
-                        </div>
+                        <h1>评价管理</h1>
                     </div>
                     <div class="modifyComment">
                         <h1>修改回复</h1>
