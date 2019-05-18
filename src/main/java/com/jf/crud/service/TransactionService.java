@@ -30,8 +30,8 @@ public class TransactionService {
     public Boolean insertTransaction(Transaction transaction) {
         return transactionMapper.insertSelective(transaction)!=0;
     }
-    public void UpdateTransaction(Map<String, Object> params) {
-        transactionMapper.updateByPrimaryKeySelective(params);
+    public Boolean UpdateTransaction(Map<String, Object> params) {
+        return transactionMapper.updateByPrimaryKeySelective(params)!=0;
     }
     public void DeleteTransaction(Integer tranid) {
         transactionMapper.deleteByPrimaryKey(tranid);

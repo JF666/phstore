@@ -535,7 +535,7 @@ function getOrder() {
                     var phonenum = data[i].buyer.phonenum;
                     var address = data[i].buyer.receiveadd;
                     if (proid === null || proid === undefined || proid === "") {
-                        $(".order").append($("<div></div>").addClass("orderList").attr("proid", proid)
+                        $(".order").append($("<div></div>").addClass("orderList").attr("tranid", tranid)
                             .append($("<h4>买家收货信息</h4>"))
                             .append($("<p></p>").text("收货人："+realname))
                             .append($("<p></p>").text("电话号码："+phonenum))
@@ -550,7 +550,7 @@ function getOrder() {
                                 .attr("class", "btn btn-danger btn-shop1 btn-Pro"))
                         );
                     } else {
-                        $(".order").append($("<div></div>").addClass("orderList").attr("proid", proid)
+                        $(".order").append($("<div></div>").addClass("orderList").attr("tranid", tranid)
                             .append($("<h4>买家收货信息</h4>"))
                             .append($("<p></p>").text("收货人：" + realname))
                             .append($("<p></p>").text("电话号码：" + phonenum))
@@ -562,6 +562,15 @@ function getOrder() {
                             .append($("<p></p>").text(proname + " " + version + " " + color))
                             .append($("<label><label/>").text(acprice + "元×" + amount))
                             .append($("<span><span/>").text(createtime))
+                            .append($("<a>修改</a>")
+                                .attr("onclick", "modifyOrder(this)")
+                                .attr("tranid", tranid)
+                                .attr("acprice", acprice)
+                                .attr("class", "btn btn-shop btn-shop1 btn-Pro"))
+                            .append($("<a>删除</a>")
+                                .attr("onclick", "deleteOrder(this)")
+                                .attr("tranid", tranid)
+                                .attr("class", "btn btn-danger btn-shop1 btn-Pro"))
                         );
                     }
                 }
@@ -569,6 +578,69 @@ function getOrder() {
         },error: function () {
         }
     });
+}
+// 修改订单页面
+function modifyOrder(obj) {
+    $(".person").css("display", "none");
+    $(".addPerson").css("display", "none");
+    $(".modifyPerson").css("display", "none");
+    $(".Pro").css("display", "none");
+    $(".addPro").css("display", "none");
+    $(".modifyPro").css("display", "none");
+    $(".order").css("display", "none");
+    $(".modifyOrder").css("display", "block");
+    $(".comment").css("display", "none");
+    $(".modifyComment").css("display", "none");
+    $(".list ul li a").removeAttr("onclick");
+    $(".user-menu li a").removeAttr("onclick");
+    var tranid = $(obj).attr("tranid");
+    var acprice = $(obj).attr("acprice");
+    $(".modifyOrder").attr("tranid", tranid);
+    $("#inAcPrice").val(acprice);
+}
+// 保存修改订单信息
+function saveModOrder() {
+    var tranid = $(".modifyOrder").attr("tranid");
+    if ($("#inAcPrice").val() === "") {
+        alert("请填写完整信息");
+    } else {
+        $.ajax({
+            url: "http://localhost:8080/phstore_war_exploded/tranPrice",
+            data: {
+                tranid: tranid,
+                acprice: $("#inAcPrice").val()
+            },
+            type: "PUT",
+            success: function () {
+                $(".modifyOrder").removeAttr("tranid");
+                getOrder();
+                cancelOrder();
+            }, error: function () {
+            }
+        });
+    }
+}
+// 取消修改订单
+function cancelOrder() {
+    $(".person").css("display", "none");
+    $(".modifyPerson").css("display", "none");
+    $(".addPerson").css("display", "none");
+    $(".Pro").css("display", "none");
+    $(".addPro").css("display", "none");
+    $(".modifyPro").css("display", "none");
+    $(".order").css("display", "block");
+    $(".modifyOrder").css("display", "none");
+    $(".comment").css("display", "none");
+    $(".modifyComment").css("display", "none");
+    $(".list ul").children().first().children().attr("onclick", "toPerson()");
+    $(".list ul").find("li").eq(1).children().attr("onclick", "toPro()");
+    $(".list ul").find("li").eq(2).children().attr("onclick", "toOrder()");
+    $(".list ul").children().last().children().attr("onclick", "toComment()");
+    $(".user-menu").find("li").eq(0).children().attr("onclick", "toPerson()");
+    $(".user-menu").find("li").eq(1).children().attr("onclick", "toPro()");
+    $(".user-menu").find("li").eq(2).children().attr("onclick", "toOrder()");
+    $(".user-menu").find("li").eq(3).children().attr("onclick", "toComment()");
+    $(".user-menu").find("li").eq(4).children().attr("onclick", "quit();return false;");
 }
 // 删除订单功能
 function deleteOrder(obj) {
@@ -629,7 +701,6 @@ function getComment() {
                     var commid = data[i].commid;
                     var proid = data[i].proid;
                     var apply = data[i].apply;
-                    var buyerid = data[i].buyerid;
                     var sellerid = data[i].sellerid;
                     $.ajax({
                         url: "http://localhost:8080/phstore_war_exploded/probyId/" + proid,
@@ -641,6 +712,10 @@ function getComment() {
                             if (data1 === null) {
                                 $(".comment").append($("<div></div>").addClass("comList")
                                     .append($("<h4>该商品已失效！</h4>"))
+                                    .append($("<a>删除</a>")
+                                        .attr("onclick", "deleteComm(this)")
+                                        .attr("commid", commid)
+                                        .attr("class", "btn btn-danger btn-shop1 btn-Pro"))
                                 );
                             } else {
                                 var acprice = data1.price - data1.discount;
@@ -649,7 +724,7 @@ function getComment() {
                                 var pic1 = pic[0].split("-");
                                 var proname = data1.proname;
                                 var version = data1.version;
-                                $(".comment").append($("<div></div>").addClass("comList").attr("buyerid", buyerid)
+                                $(".comment").append($("<div></div>").addClass("comList").attr("commid", commid)
                                     .append($("<img>").attr("src", pic1[0]).attr("alt", proname))
                                     .append($("<p></p>").text(proname + " " + version + " " + color[0]))
                                     .append($("<label><label/>").text(acprice + "元"))
@@ -673,11 +748,7 @@ function getComment() {
                                 .attr("class", "btn btn-shop btn-shop1 btn-Pro"))
                             .append($("<a>删除</a>")
                                 .attr("onclick", "deleteComm(this)")
-                                .attr("proid", proid)
-                                .attr("comminfo", comminfo)
                                 .attr("commid", commid)
-                                .attr("apply", apply)
-                                .attr("sellerid", sellerid)
                                 .attr("class", "btn btn-danger btn-shop1 btn-Pro"));
                     } else {
                         $(".comment").find("div").eq(i)
@@ -696,11 +767,7 @@ function getComment() {
                                 .attr("class", "btn btn-shop btn-shop1 btn-Pro"))
                             .append($("<a>删除</a>")
                                 .attr("onclick", "deleteComm(this)")
-                                .attr("proid", proid)
-                                .attr("comminfo", comminfo)
                                 .attr("commid", commid)
-                                .attr("apply", apply)
-                                .attr("sellerid", sellerid)
                                 .attr("class", "btn btn-danger btn-shop1 btn-Pro"));
                     }
                 }

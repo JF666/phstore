@@ -69,14 +69,17 @@ public class TransactionController {
     /**
      * 根据tranId修改更新
      */
-    @RequestMapping(value = "/tranSts", method = RequestMethod.PUT)
+    @RequestMapping(value = "/tranPrice", method = RequestMethod.PUT)
     @ResponseBody
-    public Msg UpdateTransaction(Integer transts,Integer tranid) {
+    public Msg UpdateTransaction(Integer acprice,Integer tranid) {
         Map<String, Object> params = new HashMap<>();
-        params.put("transts", transts);
+        params.put("acprice", acprice);
         params.put("tranid", tranid);
-        transactionService.UpdateTransaction(params);
-        return Msg.success();
+        if (transactionService.UpdateTransaction(params)) {
+            return Msg.success();
+        } else {
+            return Msg.fail();
+        }
     }
     /**
      * 删除

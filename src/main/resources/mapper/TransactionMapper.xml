@@ -330,12 +330,10 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="map">
+  <update id="updateByPrimaryKeySelective" parameterType="java.util.HashMap">
     update transaction
     <set>
-      <if test="transts != null">
-        tranSts = #{transts,jdbcType=INTEGER}
-      </if>
+      acprice = #{acprice,jdbcType=INTEGER}
     </set>
     where tranId = #{tranid,jdbcType=INTEGER}
   </update>
