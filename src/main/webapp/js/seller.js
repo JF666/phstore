@@ -195,7 +195,7 @@ function getPro() {
                     var proIntro = data[i].proIntro;
                     var proname = data[i].proname;
                     var version = data[i].version;
-                    $(".proList").append($("<div></div>").addClass("orderList ProList").attr("proId", proId)
+                    $(".proList").append($("<div></div>").addClass("ProList").attr("proId", proId)
                         .append($("<span><span/>").text("商品名称：")
                             .append($("<p></p>").text(proname)))
                         .append($("<span><span/>").text("商品价格：")
@@ -279,6 +279,8 @@ function deletePro(obj) {
                     .append($("<a></a>").text("马上去添加").attr("onclick", "addPro()").attr("class", "btn btn-shop btn-shop1"))
                 );
             }
+            getOrder();
+            getComment();
         }, error: function () {
 
         }
@@ -391,6 +393,8 @@ function toOrder() {
     $(".modifyComment").css("display", "none");
 }
 function getOrder() {
+    $(".order").empty();
+    $(".order").append($("<h1>订单信息</h1>"));
     $.ajax({
         url: "http://localhost:8080/phstore_war_exploded/tranBySeller",
         data: {
@@ -406,6 +410,7 @@ function getOrder() {
                 );
             } else {
                 for (i in data) {
+                    var tranid = data[i].tranid;
                     var acprice = data[i].acprice;
                     var amount = data[i].amount;
                     var color = data[i].color;
@@ -418,7 +423,7 @@ function getOrder() {
                     var phonenum = data[i].buyer.phonenum;
                     var address = data[i].buyer.receiveadd;
                     if (proid === null) {
-                        $(".order").append($("<div></div>").addClass("orderList").attr("proid", proid)
+                        $(".order").append($("<div></div>").addClass("orderList")
                             .append($("<h4>买家收货信息</h4>"))
                             .append($("<p></p>").text("收货人："+realname))
                             .append($("<p></p>").text("电话号码："+phonenum))
@@ -427,6 +432,10 @@ function getOrder() {
                             .append($("<h4>订单商品信息</h4>"))
                             .append($("<br>"))
                             .append($("<h3>该商品已失效！</h3>"))
+                            .append($("<a>删除</a>")
+                                .attr("onclick", "deleteOrder(this)")
+                                .attr("tranid", tranid)
+                                .attr("class", "btn btn-danger btn-shop1 btn-comm"))
                         );
                     } else {
                         $(".order").append($("<div></div>").addClass("orderList").attr("proid", proid)
@@ -449,7 +458,30 @@ function getOrder() {
         }
     });
 }
+function deleteOrder(obj) {
+    var tranid = $(obj).attr("tranid");
+    $.ajax({
+        url: "http://localhost:8080/phstore_war_exploded/transaction/" + tranid,
+        data: {},
+        type: "DELETE",
+        success: function () {
+            $(obj).parent().hide(1000, function () {
+                $(obj).parent().remove();
+            });
+            if($(".order").children().length === 1){
+                $(".order").empty();
+                $(".order").append($("<div></div>").addClass("emptyOrder")
+                    .append($("<h2>尚未售出商品！</h2>"))
+                );
+            }
+        }, error: function () {
+
+        }
+    });
+}
 function getComment() {
+    $(".comment").empty();
+    $(".comment").append($("<h1>评价信息</h1>"));
     $.ajax({
         url: "http://localhost:8080/phstore_war_exploded/tranBySeller",
         data: {
@@ -474,13 +506,14 @@ function getComment() {
                     var proname = data[i].product.proname;
                     var version = data[i].product.version;
                     if (proid === null) {
-                        $(".comment").append($("<div></div>").addClass("orderList comList")
+                        $(".comment").append($("<div></div>").addClass("comList")
                             .append($("<h3>该商品已失效！</h3>"))
                         );
                     } else {
                         if (pros.indexOf(proid) === -1) {
                             pros.push(proid);
-                            $(".comment").append($("<div></div>").addClass("orderList comList").attr("buyerid", buyerid)
+                            $(".comment").append($("<div></div>").addClass("comList")
+                                .attr("buyerid", buyerid).attr("proid", proid)
                                 .append($("<img>").attr("src", pic).attr("alt", proname))
                                 .append($("<p></p>").text(proname + " " + version + " " + color))
                                 .append($("<label><label/>").text(acprice + "元"))
@@ -500,13 +533,13 @@ function getComment() {
                         success: function (response) {
                             var data = response.extend.comment;
                             if (data === null) {
-                                $(".comment").find("div").eq(i)
+                                $(".comList[proid='" + pros[i] + "']")
                                     .append($("<p>买家尚未评价！</p>"));
                             } else {
                                 var comminfo = data.comminfo;
                                 var commid = data.commid;
                                 if (data.apply === "") {
-                                    $(".comment").find("div").eq(i)
+                                    $(".comList[proid='" + pros[i] + "']")
                                         .append($("<a>回复</a>")
                                             .attr("onclick", "addComm(this)")
                                             .attr("proid", pros[i])
@@ -517,7 +550,7 @@ function getComment() {
                                         .append($("<h4>评价详情</h4>"))
                                         .append($("<span></span>").text("买家评价：" + comminfo));
                                 } else {
-                                    $(".comment").find("div").eq(i)
+                                    $(".comList[proid='" + pros[i] + "']")
                                         .append($("<a>修改</a>")
                                             .attr("onclick", "modifyComm(this)")
                                             .attr("proid", pros[i])

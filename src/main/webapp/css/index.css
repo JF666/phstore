@@ -1190,13 +1190,16 @@ h3 {
     word-wrap: break-word;
     display: block;
 }
+.person .btn-shop1,.Pro .btn-shop1 {
+    margin-bottom: 0;
+    color: #ffffff;
+}
 .emptyOrder {
     width: 100%;
     text-align: center;
 }
-.person .btn-shop1,.Pro .btn-shop1 {
-    margin-bottom: 0;
-    color: #ffffff;
+.emptyOrder a {
+    margin-bottom: 30px;
 }
 .btn-comm {
     width: 15%;

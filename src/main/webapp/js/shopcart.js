@@ -1,8 +1,8 @@
 var buyerId=localStorage.getItem("buyerId");
-var cartTotalNum = 0;
-var selTotalNum = 0;
-var cartTotalPrice = 0;
-var TotalPrice = 0;
+var cartTotalNum = 0; // 总数量
+var selTotalNum = 0; // 选择数量
+var cartTotalPrice = 0; // 合计
+var TotalPrice = 0; // 总价
 var goods = [];
 var record = [];
 var record1 = [];
@@ -25,39 +25,52 @@ $(function() {
                 $(".cartList").empty();
                 for (i in data) {
                     var shopcartId = data[i].shopcartid;
-                    var proId = data[i].product.proId;
-                    var sellerId = data[i].product.sellerid;
-                    var proname = data[i].product.proname;
-                    var version = data[i].product.version;
-                    var color = data[i].color;
-                    var pic = data[i].pic;
-                    var price = data[i].acprice;
-                    var amount = data[i].amount;
-                    cartTotalNum += amount;
-                    var total = price*amount;
-                    TotalPrice += total;
-                    $(".cartList").append($("<div></div>").addClass("shopProList")
-                        .append($("<div></div>").addClass("col col-check")
-                            .append($("<span></span>").attr("shopcartId", shopcartId)
-                                .attr("sellerId", sellerId)
-                                .addClass("iconfont icon-checkbox")
-                                .attr("onclick", "checkRow(this)").attr("CheckOrNot", "0")))
-                        .append($("<div></div>").addClass("col col-img")
-                            .append($("<img>").attr("src", pic).attr("alt", proname)))
-                        .append($("<div></div>").addClass("col col-name").text(proname+" "+version+" "+color))
-                        .append($("<div></div>").addClass("col col-price").text(price+"元"))
-                        .append($("<div></div>").addClass("col col-num").attr("proId", proId).attr("color", color)
-                            .append($("<span></span>").addClass("glyphicon glyphicon-minus").attr("onclick", "minus(this)"))
-                            .append($("<input autocomplete='off'>").addClass("goodsNum").attr("value", amount))
-                            .append($("<span></span>").addClass("glyphicon glyphicon-plus").attr("onclick", "plus(this)"))
-                        )
-                        .append($("<div></div>").addClass("col col-total").text(total+"元"))
-                        .append($("<div></div>").addClass("col col-action")
-                            .append($("<a></a>").attr("onclick", "remove(this)")
-                                .append($("<span></span>").addClass("glyphicon glyphicon-remove"))
+                    var product = data[i].product;
+                    if (product === null) {
+                        $(".cartList").append($("<div></div>").addClass("shopProList")
+                            .append($("<div></div>").addClass("col col-name")
+                                .append($("<span></span>").attr("shopcartId", shopcartId).text("该商品已失效！")))
+                            .append($("<div></div>").addClass("col col-action")
+                                .append($("<a></a>").attr("onclick", "removeDis(this)")
+                                    .append($("<span></span>").addClass("glyphicon glyphicon-remove"))
+                                )
                             )
-                        )
-                    );
+                        );
+                    } else {
+                        var proId = data[i].product.proId;
+                        var sellerId = data[i].product.sellerid;
+                        var proname = data[i].product.proname;
+                        var version = data[i].product.version;
+                        var color = data[i].color;
+                        var pic = data[i].pic;
+                        var price = data[i].acprice;
+                        var amount = data[i].amount;
+                        cartTotalNum += amount;
+                        var total = price*amount;
+                        TotalPrice += total;
+                        $(".cartList").append($("<div></div>").addClass("shopProList")
+                            .append($("<div></div>").addClass("col col-check")
+                                .append($("<span></span>").attr("shopcartId", shopcartId)
+                                    .attr("sellerId", sellerId)
+                                    .addClass("iconfont icon-checkbox")
+                                    .attr("onclick", "checkRow(this)").attr("CheckOrNot", "0")))
+                            .append($("<div></div>").addClass("col col-img")
+                                .append($("<img>").attr("src", pic).attr("alt", proname)))
+                            .append($("<div></div>").addClass("col col-name").text(proname + " " + version + " " + color))
+                            .append($("<div></div>").addClass("col col-price").text(price + "元"))
+                            .append($("<div></div>").addClass("col col-num").attr("proId", proId).attr("color", color)
+                                .append($("<span></span>").addClass("glyphicon glyphicon-minus").attr("onclick", "minus(this)"))
+                                .append($("<input autocomplete='off'>").addClass("goodsNum").attr("value", amount))
+                                .append($("<span></span>").addClass("glyphicon glyphicon-plus").attr("onclick", "plus(this)"))
+                            )
+                            .append($("<div></div>").addClass("col col-total").text(total + "元"))
+                            .append($("<div></div>").addClass("col col-action")
+                                .append($("<a></a>").attr("onclick", "remove(this)")
+                                    .append($("<span></span>").addClass("glyphicon glyphicon-remove"))
+                                )
+                            )
+                        );
+                    }
                 }
                 $("#cartTotalNum").text(cartTotalNum);
                 $(".goodsNum").focus(function () {
@@ -226,6 +239,53 @@ function checkRow(obj) {
     }
 }
 function remove(obj) {
+    var CheckOrNot = $(obj).parent().parent().children().first().children().attr("CheckOrNot");
+    var proId = Number($(obj).parent().prev().prev().attr("proid"));
+    var color = $(obj).parent().prev().prev().attr("color");
+    var total = $(obj).parent().prev().text();
+    if (CheckOrNot === "1") {
+        console.log(record.indexOf(proId));
+        if (record.indexOf(proId) !== -1 && record1.indexOf(color) !== -1) {
+            var index = record.indexOf(proId);
+            goods.splice(index, 1);
+            record.splice(index, 1);
+            record1.splice(index, 1);
+        }
+        cartTotalNum -= Number($(obj).parent().prev().prev().find("input").eq(0).val());
+        selTotalNum -= Number($(obj).parent().prev().prev().find("input").eq(0).val());
+        cartTotalPrice -= Number(total.substring(0,total.indexOf("元")));
+        TotalPrice -= Number(total.substring(0,total.indexOf("元")));
+        $("#cartTotalNum").text(cartTotalNum);
+        $("#selTotalNum").text(selTotalNum);
+        $("#cartTotalPrice").text(cartTotalPrice);
+        if (selTotalNum < cartTotalNum) {
+            $(".cartHead .col-check").children().attr("CheckOrNot", "0");
+            $(".cartHead .col-check").children().removeClass("iconfont icon-duoxuanzhijiao").addClass("iconfont icon-checkbox");;
+        }
+        if (selTotalNum === 0) {
+            $(".btn-sum").attr("disabled", true);
+        }
+    }
+    var shopCartId = Number(obj.parentNode.parentNode.childNodes[0].childNodes[0].getAttribute("shopcartId"));
+    $.ajax({
+        url: "http://localhost:8080/phstore_war_exploded/shopcart/" + shopCartId,
+        data: {},
+        type: "DELETE",
+        success: function () {
+            $(obj).parent().parent().hide(1000, function () {
+                $(obj).parent().parent().remove();
+            });
+            if($(".cartList").children().length === 1){
+                $(".table_r").empty();
+                $(".table_btn").empty();
+                $(".table_r").append($("<h2>您的购物车还是空的！</h2>"))
+                    .append($("<a></a>").text("马上去购物").attr("href", "index.html").attr("class", "btn btn-shop"));
+            }
+        }, error: function () {
+        }
+    });
+}
+function removeDis(obj) {
     var shopCartId = Number(obj.parentNode.parentNode.childNodes[0].childNodes[0].getAttribute("shopcartId"));
     $.ajax({
         url: "http://localhost:8080/phstore_war_exploded/shopcart/" + shopCartId,

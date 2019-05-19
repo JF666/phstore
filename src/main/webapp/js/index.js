@@ -242,6 +242,7 @@ function removeItem(obj) {
     var name = $(obj).next().children().last().text();
     compName.splice(compName.indexOf(name),1);
     $(".products1 ul li button[proname='"+name+"']").attr("disabled", false);
+    $(".searchResult ul li button[proname='"+name+"']").attr("disabled", false);
     var num = $("#CompareNum").text();
     num--;
     $("#CompareNum").text(num);

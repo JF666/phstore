@@ -398,6 +398,8 @@ function deletePro(obj) {
                     .append($("<a></a>").text("马上去添加").attr("onclick", "addPro()").attr("class", "btn btn-shop btn-shop1"))
                 );
             }
+            getOrder();
+            getComment();
         }, error: function () {
 
         }
@@ -683,7 +685,7 @@ function toComment() {
 // 获取评价信息
 function getComment() {
     $(".comment").empty();
-    $(".comment").append($("<h1>评价晒单</h1>"));
+    $(".comment").append($("<h1>评价管理</h1>"));
     $.ajax({
         url: "http://localhost:8080/phstore_war_exploded/allcomment",
         data: {},
@@ -702,22 +704,22 @@ function getComment() {
                     var proid = data[i].proid;
                     var apply = data[i].apply;
                     var sellerid = data[i].sellerid;
-                    $.ajax({
-                        url: "http://localhost:8080/phstore_war_exploded/probyId/" + proid,
-                        data: {},
-                        type: "GET",
-                        async: false,
-                        success: function (response) {
-                            var data1 = response.extend.product;
-                            if (data1 === null) {
-                                $(".comment").append($("<div></div>").addClass("comList")
-                                    .append($("<h4>该商品已失效！</h4>"))
-                                    .append($("<a>删除</a>")
-                                        .attr("onclick", "deleteComm(this)")
-                                        .attr("commid", commid)
-                                        .attr("class", "btn btn-danger btn-shop1 btn-Pro"))
-                                );
-                            } else {
+                    if (proid === null) {
+                        $(".comment").append($("<div></div>").addClass("comList")
+                            .append($("<h4>该商品已失效！</h4>"))
+                            .append($("<a>删除</a>")
+                                .attr("onclick", "deleteComm(this)")
+                                .attr("commid", commid)
+                                .attr("class", "btn btn-danger btn-shop1 btn-Pro"))
+                        );
+                    } else {
+                        $.ajax({
+                            url: "http://localhost:8080/phstore_war_exploded/probyId/" + proid,
+                            data: {},
+                            type: "GET",
+                            async: false,
+                            success: function (response) {
+                                var data1 = response.extend.product;
                                 var acprice = data1.price - data1.discount;
                                 var color = data1.color.split("*");
                                 var pic = data1.pic.split("*");
@@ -729,46 +731,47 @@ function getComment() {
                                     .append($("<p></p>").text(proname + " " + version + " " + color[0]))
                                     .append($("<label><label/>").text(acprice + "元"))
                                 );
+                            }, error: function () {
                             }
-                        },error: function () {
+                        });
+                        if (apply === "") {
+                            $(".comment").find("div").eq(i)
+                                .append($("<br>"))
+                                .append($("<h4>评价详情</h4>"))
+                                .append($("<span></span>").text("买家评价：" + comminfo))
+                                .append($("<a>修改</a>")
+                                    .attr("onclick", "modifyComm(this)")
+                                    .attr("proid", proid)
+                                    .attr("comminfo", comminfo)
+                                    .attr("commid", commid)
+                                    .attr("apply", apply)
+                                    .attr("sellerid", sellerid)
+                                    .attr("class", "btn btn-shop btn-shop1 btn-Pro"))
+                                .append($("<a>删除</a>")
+                                    .attr("onclick", "deleteComm(this)")
+                                    .attr("commid", commid)
+                                    .attr("class", "btn btn-danger btn-shop1 btn-Pro"));
+                        } else {
+                            $(".comment").find("div").eq(i)
+                                .append($("<br>"))
+                                .append($("<h4>评价详情</h4>"))
+                                .append($("<span></span>").text("买家评价：" + comminfo))
+                                .append($("<br>"))
+                                .append($("<span></span>").text("卖家回复：" + apply))
+                                .append($("<a>修改</a>")
+                                    .attr("onclick", "modifyComm(this)")
+                                    .attr("proid", proid)
+                                    .attr("comminfo", comminfo)
+                                    .attr("commid", commid)
+                                    .attr("apply", apply)
+                                    .attr("sellerid", sellerid)
+                                    .attr("class", "btn btn-shop btn-shop1 btn-Pro"))
+                                .append($("<a>删除</a>")
+                                    .attr("onclick", "deleteComm(this)")
+                                    .attr("commid", commid)
+                                    .attr("class", "btn btn-danger btn-shop1 btn-Pro")
+                                );
                         }
-                    });
-                    if (apply === "") {
-                        $(".comment").find("div").eq(i)
-                            .append($("<br>"))
-                            .append($("<h4>评价详情</h4>"))
-                            .append($("<span></span>").text("买家评价：" + comminfo))
-                            .append($("<a>修改</a>")
-                                .attr("onclick", "modifyComm(this)")
-                                .attr("proid", proid)
-                                .attr("comminfo", comminfo)
-                                .attr("commid", commid)
-                                .attr("apply", apply)
-                                .attr("sellerid", sellerid)
-                                .attr("class", "btn btn-shop btn-shop1 btn-Pro"))
-                            .append($("<a>删除</a>")
-                                .attr("onclick", "deleteComm(this)")
-                                .attr("commid", commid)
-                                .attr("class", "btn btn-danger btn-shop1 btn-Pro"));
-                    } else {
-                        $(".comment").find("div").eq(i)
-                            .append($("<br>"))
-                            .append($("<h4>评价详情</h4>"))
-                            .append($("<span></span>").text("买家评价：" + comminfo))
-                            .append($("<br>"))
-                            .append($("<span></span>").text("卖家回复：" + apply))
-                            .append($("<a>修改</a>")
-                                .attr("onclick", "modifyComm(this)")
-                                .attr("proid", proid)
-                                .attr("comminfo", comminfo)
-                                .attr("commid", commid)
-                                .attr("apply", apply)
-                                .attr("sellerid", sellerid)
-                                .attr("class", "btn btn-shop btn-shop1 btn-Pro"))
-                            .append($("<a>删除</a>")
-                                .attr("onclick", "deleteComm(this)")
-                                .attr("commid", commid)
-                                .attr("class", "btn btn-danger btn-shop1 btn-Pro"));
                     }
                 }
             }
