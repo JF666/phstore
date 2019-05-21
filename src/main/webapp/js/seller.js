@@ -538,6 +538,7 @@ function getComment() {
                             } else {
                                 var comminfo = data.comminfo;
                                 var commid = data.commid;
+                                var apply = data.apply;
                                 if (data.apply === "") {
                                     $(".comList[proid='" + pros[i] + "']")
                                         .append($("<a>回复</a>")
@@ -551,17 +552,24 @@ function getComment() {
                                         .append($("<span></span>").text("买家评价：" + comminfo));
                                 } else {
                                     $(".comList[proid='" + pros[i] + "']")
-                                        .append($("<a>修改</a>")
-                                            .attr("onclick", "modifyComm(this)")
-                                            .attr("proid", pros[i])
-                                            .attr("comminfo", comminfo)
-                                            .attr("commid", commid)
-                                            .attr("class", "btn btn-shop btn-shop1 btn-comm"))
                                         .append($("<br>"))
                                         .append($("<h4>评价详情</h4>"))
                                         .append($("<span></span>").text("买家评价：" + comminfo))
                                         .append($("<br>"))
-                                        .append($("<span></span>").text("卖家回复：" + data.apply));
+                                        .append($("<span></span>").text("卖家回复：" + data.apply))
+                                        .append($("<a>修改回复</a>")
+                                            .attr("onclick", "modifyComm(this)")
+                                            .attr("proid", pros[i])
+                                            .attr("comminfo", comminfo)
+                                            .attr("commid", commid)
+                                            .attr("apply", apply)
+                                            .attr("class", "btn btn-shop btn-shop1 btn-Pro"))
+                                        .append($("<a>删除回复</a>")
+                                            .attr("onclick", "deleteApply(this)")
+                                            .attr("proid", pros[i])
+                                            .attr("comminfo", comminfo)
+                                            .attr("commid", commid)
+                                            .attr("class", "btn btn-danger btn-shop1 btn-Pro"));
                                 }
                             }
                         }, error: function () {
@@ -636,6 +644,29 @@ function addComm(obj) {
         .append($("<span><span/>").text(acprice))
     );
 }
+function deleteApply(obj) {
+    var proid = $(obj).attr("proid");
+    var buyerid = $(obj).parent().attr("buyerid");
+    var commInfo = $(obj).attr("comminfo");
+    var commid = $(obj).attr("commid");
+    $.ajax({
+        url: "http://localhost:8080/phstore_war_exploded/comment/"+commid,
+        data: {
+            buyerid: buyerid,
+            sellerid: sellerId,
+            comminfo: commInfo,
+            apply: "",
+            commsts: 0,
+            proid: proid
+        },
+        type: "PUT",
+        success: function () {
+            getComment();
+            cancelComm();
+        }, error: function () {
+        }
+    });
+}
 function modifyComm(obj) {
     $(".person").css("display", "none");
     $(".addPerson").css("display", "none");
@@ -652,18 +683,54 @@ function modifyComm(obj) {
     var proid = $(obj).attr("proid");
     var comminfo = $(obj).attr("comminfo");
     var commid = $(obj).attr("commid");
+    var apply = $(obj).attr("apply");
     var buyerid = $(obj).parent().attr("buyerid");
     var pic = $(obj).parent().children().first().attr("src");
     var proname = $(obj).parent().children().first().attr("alt");
-    var name = $(obj).prev().prev().children().text();
-    var acprice = $(obj).prev().text();
+    var name = $(obj).parent().children().first().next().text();
+    var acprice = $(obj).parent().children().first().next().next().text();
     $(".commentPro").empty();
     $(".commentPro").append($("<div></div>").addClass("addComm")
-        .attr("proid", proid).attr("buyerid", buyerid).attr("comminfo", comminfo).attr("commid", commid)
+        .attr("proid", proid).attr("buyerid", buyerid)
+        .attr("comminfo", comminfo).attr("commid", commid).attr("apply", apply)
         .append($("<img>").attr("src", pic).attr("alt", proname))
         .append($("<p></p>").text(name))
         .append($("<span><span/>").text(acprice))
     );
+    if (apply === "") {
+        $("#commentContent1").val("写点感谢客户的话吧");
+    } else {
+        $("#commentContent1").val(apply);
+    }
+}
+function savemodifyComm(obj) {
+    var proid = $(obj).parent().parent().prev().children().attr("proid");
+    var buyerid = $(obj).parent().parent().prev().children().attr("buyerid");
+    var commid = $(obj).parent().parent().prev().children().attr("commid");
+    var sellerid = $(obj).parent().parent().prev().children().attr("sellerid");
+    var comminfo = $(obj).parent().parent().prev().children().attr("comminfo");
+    if ($("#commentContent1").val() === "" ||
+        $("#commentContent1").val() === "写点感谢客户的话吧") {
+        alert("请填写完整信息");
+    } else {
+        $.ajax({
+            url: "http://localhost:8080/phstore_war_exploded/comment/" + commid,
+            data: {
+                buyerid: buyerid,
+                sellerid: sellerid,
+                comminfo: comminfo,
+                apply: $("#commentContent1").val(),
+                commsts: 0,
+                proid: proid
+            },
+            type: "PUT",
+            success: function () {
+                getComment();
+                cancelComm();
+            }, error: function () {
+            }
+        });
+    }
 }
 function saveComm(obj) {
     var apply = $(obj).parent().prev().val();
@@ -671,25 +738,28 @@ function saveComm(obj) {
     var buyerid = $(obj).parent().parent().prev().children().attr("buyerid");
     var commInfo = $(obj).parent().parent().prev().children().attr("comminfo");
     var commid = $(obj).parent().parent().prev().children().attr("commid");
-    $.ajax({
-        url: "http://localhost:8080/phstore_war_exploded/comment/"+commid,
-        data: {
-            buyerid: buyerid,
-            sellerid: sellerId,
-            comminfo: commInfo,
-            apply: apply,
-            commsts: 0,
-            proid: proid
-        },
-        type: "PUT",
-        success: function () {
-            $(".comment").empty();
-            $(".comment").append($("<h1>评价晒单</h1>"));
-            getComment();
-            cancelComm();
-        }, error: function () {
-        }
-    });
+    if ($("#commentContent").val() === "" ||
+        $("#commentContent").val() === "外形如何，品质如何，好用吗，写点您真实的使用感受吧") {
+        alert("请填写完整信息");
+    } else {
+        $.ajax({
+            url: "http://localhost:8080/phstore_war_exploded/comment/" + commid,
+            data: {
+                buyerid: buyerid,
+                sellerid: sellerId,
+                comminfo: commInfo,
+                apply: apply,
+                commsts: 0,
+                proid: proid
+            },
+            type: "PUT",
+            success: function () {
+                getComment();
+                cancelComm();
+            }, error: function () {
+            }
+        });
+    }
 }
 function cancelComm() {
     $(".person").css("display", "none");

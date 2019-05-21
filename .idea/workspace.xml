@@ -13,24 +13,99 @@
       <change beforePath="$PROJECT_DIR$/src/main/webapp/compare.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/compare.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/今样.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/凯旋.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/勿忘.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/原罪猎人.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/圣女祈祷.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/山吹.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/异度黑核侵蚀.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/强袭.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/影舞冲击.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/战场疾风.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/战车.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/月下初拥.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/月光.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/月蚀.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/月轮.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/极地战刃.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/樱火轮舞.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/次元边界突破.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/深红.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/游侠.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/炽翎.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/白夜执事.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/白练.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/真炎幸魂.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/神恩颂歌.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/空之律者.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/第六夜想曲.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/紫苑.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/绯红.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/血色玫瑰.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/誓约.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/迅羽.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/逆神巫女.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/银狼的黎明.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/雪地狙击.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/雷电女王的鬼铠.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/黯蔷薇.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/admin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/js/person.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/person.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/js/seller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/seller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/shopcart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/shopcart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/order.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/person.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/person.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/seller.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/seller.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/shopcart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/shopcart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jf/crud/controller/TransactionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jf/crud/controller/TransactionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jf/crud/service/TransactionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jf/crud/service/TransactionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/TransactionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/TransactionMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/controller/TransactionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/controller/TransactionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/service/TransactionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/com/jf/crud/service/TransactionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/mapper/TransactionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/WEB-INF/classes/mapper/TransactionMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/phstore/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/phstore/js/seller.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/js/seller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/phstore/js/shopcart.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/js/shopcart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/compare.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/compare.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/今样.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/凯旋.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/勿忘.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/原罪猎人.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/圣女祈祷.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/山吹.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/异度黑核侵蚀.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/强袭.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/影舞冲击.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/战场疾风.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/战车.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/月下初拥.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/月光.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/月蚀.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/月轮.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/极地战刃.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/樱火轮舞.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/次元边界突破.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/深红.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/游侠.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/炽翎.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/白夜执事.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/白练.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/真炎幸魂.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/神恩颂歌.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/空之律者.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/第六夜想曲.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/紫苑.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/绯红.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/血色玫瑰.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/誓约.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/迅羽.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/逆神巫女.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/银狼的黎明.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/雪地狙击.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/雷电女王的鬼铠.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/img/黯蔷薇.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/js/person.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/js/person.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/order.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/person.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/person.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/seller.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/seller.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/phstore/shopcart.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/phstore/shopcart.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -72,48 +147,137 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="951">
-              <caret line="243" column="77" lean-forward="true" selection-start-line="243" selection-start-column="77" selection-end-line="243" selection-end-column="77" />
-              <folding>
-                <element signature="e#76#1947#0" />
-                <element signature="n#!!block;n#toPn#0" />
-                <element signature="n#!!block;n#quit#0" />
-                <element signature="n#!!block;n#over#0" />
-                <element signature="n#!!block;n#cart#0" />
-                <element signature="n#!!block;n#emptyItem#0" />
-                <element signature="n#!!block;n#toComp#0" />
-                <element signature="n#!!block;n#search#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/search.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="102" column="40" selection-start-line="102" selection-start-column="28" selection-end-line="102" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state relative-caret-position="776">
               <caret line="101" column="37" selection-start-line="101" selection-start-column="28" selection-end-line="101" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/search.js">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2504">
-              <caret line="79" column="32" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="32" />
+            <state relative-caret-position="375">
+              <caret line="1116" column="1" lean-forward="true" selection-start-line="1116" selection-start-column="1" selection-end-line="1116" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/person.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="485">
+              <caret line="449" column="19" selection-start-line="449" selection-start-column="9" selection-end-line="449" selection-end-column="19" />
+              <folding>
+                <element signature="e#115#547#0" />
+                <element signature="n#!!block;n#toPerson#0" />
+                <element signature="n#!!block;n#getPerson#0" />
+                <element signature="n#!!block;n#modifyPer#0" />
+                <element signature="n#!!block;n#saveMod#0" />
+                <element signature="n#!!block;n#cancelMod#0" />
+                <element signature="n#!!block;n#addPer#0" />
+                <element signature="n#!!block;n#saveAdd#0" />
+                <element signature="n#!!block;n#resetAdd#0" />
+                <element signature="n#!!block;n#disClick#0" />
+                <element signature="n#!!block;n#toOrder#0" />
+                <element signature="n#!!block;n#getOrder#0" />
+                <element signature="n#!!block;n#deleteOrder#0" />
+                <element signature="n#!!block;n#getComment#0" />
+                <element signature="n#!!block;n#modifyComm#0" />
+                <element signature="n#!!block;n#savemodifyComm#0" />
+                <element signature="n#!!block;n#toComment#0" />
+                <element signature="n#!!block;n#addComm#0" />
+                <element signature="n#!!block;n#saveComm#0" />
+                <element signature="e#15647#16156#0" />
+                <element signature="n#!!block;n#cancelComm#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/person.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="416">
+              <caret line="136" column="46" selection-start-line="136" selection-start-column="46" selection-end-line="136" selection-end-column="46" />
+              <folding>
+                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#3;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#4;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#5;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#6;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/seller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="452">
+              <caret line="646" column="26" selection-start-line="646" selection-start-column="26" selection-end-line="646" selection-end-column="26" />
+              <folding>
+                <element signature="e#130#924#0" />
+                <element signature="n#!!block;n#toPerson#0" />
+                <element signature="n#!!block;n#getPerson#0" />
+                <element signature="n#!!block;n#modifyPer#0" />
+                <element signature="n#!!block;n#saveMod#0" />
+                <element signature="n#!!block;n#cancelMod#0" />
+                <element signature="n#!!block;n#addPer#0" />
+                <element signature="n#!!block;n#saveAdd#0" />
+                <element signature="n#!!block;n#resetAdd#0" />
+                <element signature="n#!!block;n#disClick#0" />
+                <element signature="n#!!block;n#toPro#0" />
+                <element signature="n#!!block;n#getPro#0" />
+                <element signature="n#!!block;n#addPro#0" />
+                <element signature="n#!!block;n#modifyPro#0" />
+                <element signature="n#!!block;n#deletePro#0" />
+                <element signature="n#!!block;n#saveAddPro#0" />
+                <element signature="n#!!block;n#cancelPro#0" />
+                <element signature="n#!!block;n#saveModPro#0" />
+                <element signature="n#!!block;n#toOrder#0" />
+                <element signature="n#!!block;n#getOrder#0" />
+                <element signature="n#!!block;n#deleteOrder#0" />
+                <element signature="n#!!block;n#getComment#0" />
+                <element signature="n#!!block;n#toComment#0" />
+                <element signature="n#!!block;n#addComm#0" />
+                <element signature="n#!!block;n#deleteComm#0" />
+                <element signature="n#!!block;n#modifyComm#0" />
+                <element signature="n#!!block;n#savemodifyComm#0" />
+                <element signature="n#!!block;n#saveComm#0" />
+                <element signature="n#!!block;n#cancelComm#0" />
+                <element signature="n#!!block;n#quit#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/seller.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="165" column="69" lean-forward="true" selection-start-line="165" selection-start-column="69" selection-end-line="165" selection-end-column="69" />
+              <folding>
+                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#3;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#4;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#5;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#6;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#7;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#8;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -137,23 +301,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>modifyOrder</find>
-      <find>cancelOrder</find>
-      <find>saveOrder</find>
-      <find>updateByPrimaryKeySelective</find>
-      <find>record</find>
-      <find>cartTotalPrice</find>
-      <find>cartTotalNum</find>
-      <find>selTotalNum</find>
-      <find>TotalPrice</find>
-      <find>record.push</find>
-      <find>emptyOrder</find>
-      <find>btn-shop</find>
-      <find>.btn-shop</find>
-      <find>shopcartBuyer</find>
-      <find>shopcart</find>
-      <find>remove</find>
-      <find>cartList</find>
       <find>/phstore_war_exploded/comm</find>
       <find>Order()</find>
       <find>person</find>
@@ -166,10 +313,26 @@
       <find>removeItem</find>
       <find>removeItem(</find>
       <find>searchResult</find>
+      <find>addComp</find>
       <find>products1</find>
+      <find>logo_1</find>
+      <find>.logo img</find>
+      <find>apply</find>
+      <find>.modifyComment</find>
+      <find>$(&quot;.addComment&quot;).css(&quot;display&quot;, &quot;none&quot;);</find>
+      <find>$(&quot;.modifyComment&quot;).css(</find>
+      <find>$(&quot;.list ul li a&quot;).removeAttr(&quot;onclick&quot;);</find>
+      <find>topbar-cart</find>
+      <find>deleteOrder</find>
+      <find>modifyComment</find>
+      <find>comList</find>
+      <find>deleteComm</find>
+      <find>modifyComm</find>
+      <find>if ($(&quot;#commentContent1&quot;).val() === &quot;&quot;</find>
+      <find>saveComm</find>
+      <find>buyerid</find>
     </findStrings>
     <replaceStrings>
-      <replace>proname</replace>
       <replace>intro[0];</replace>
       <replace>&gt;</replace>
       <replace>337ab7</replace>
@@ -199,6 +362,7 @@
       <replace>&quot;)</replace>
       <replace>input</replace>
       <replace />
+      <replace>logo</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -220,7 +384,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/detail.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/order.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/add.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/search.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/login.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/style.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/jf/crud/controller/SellerController.java" />
@@ -232,7 +395,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/jf/crud/dao/CommentMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jf/crud/bean/Product.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jf/crud/dao/ProductMapperTest.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/index.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/jf/crud/controller/ProductController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jf/crud/service/ProductService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jf/crud/dao/ProductMapper.java" />
@@ -250,13 +412,15 @@
         <option value="$PROJECT_DIR$/src/main/resources/mapper/TransactionMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/jf/crud/service/TransactionService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jf/crud/controller/TransactionController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/index.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/shopcart.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/seller.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/admin.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/admin.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/index.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/search.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/index.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/admin.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/person.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/person.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/seller.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/seller.js" />
       </list>
     </option>
@@ -298,7 +462,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-24" />
+    <option name="x" value="-25" />
     <option name="y" value="15" />
     <option name="width" value="1700" />
     <option name="height" value="1300" />
@@ -310,7 +474,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -350,6 +513,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="phstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="phstore" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -357,6 +528,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -369,7 +541,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558205807767" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558355517997" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="XHTML" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
@@ -693,7 +865,9 @@
       <workItem from="1558245499238" duration="569000" />
       <workItem from="1558246175372" duration="185000" />
       <workItem from="1558246451460" duration="4492000" />
-      <workItem from="1558251335977" duration="7671000" />
+      <workItem from="1558251335977" duration="8570000" />
+      <workItem from="1558354745074" duration="697000" />
+      <workItem from="1558406519037" duration="11253000" />
     </task>
     <task id="LOCAL-00001" summary="更新c3p0到0.9.5.3版本">
       <created>1558063109321</created>
@@ -744,7 +918,14 @@
       <option name="project" value="LOCAL" />
       <updated>1558203198710</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="系统最终版1.0：无效商品提示完成">
+      <created>1558259330588</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1558259330588</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -780,7 +961,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="630418000" />
+    <option name="totallyTimeSpent" value="643267000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -795,7 +976,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19829424" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.20309168" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -834,7 +1015,7 @@
       <window_info anchor="right" id="Bean Validation" order="10" weight="0.3297587" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.19829424" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20309168" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -845,7 +1026,7 @@
       <window_info id="JavaEE:App" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32850778" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.31069043" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.31069043" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4568082" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -894,7 +1075,8 @@
     <MESSAGE value="1.数据库中修改为修改删除买家卖家时级联，修改删除商品时设为空&#10;2.系统管理员界面第一版" />
     <MESSAGE value="系统管理员界面第二版" />
     <MESSAGE value="系统管理员界面第三版：&#10;1.订单管理完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="系统管理员界面第三版：&#10;1.订单管理完成" />
+    <MESSAGE value="系统最终版1.0：无效商品提示完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="系统最终版1.0：无效商品提示完成" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -910,17 +1092,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/target/phstore/WEB-INF/classes/mapper/TransactionMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="106" column="17" selection-start-line="106" selection-start-column="17" selection-end-line="106" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/target/classes/com/jf/crud/dao/TransactionMapper.class">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -943,16 +1114,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2358">
-          <caret line="78" column="16" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
-          <folding>
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1236,10 +1397,85 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/controller/TransactionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="56" column="66" selection-start-line="56" selection-start-column="66" selection-end-line="56" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/service/TransactionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+          <folding>
+            <element signature="e#403#404#0" expanded="true" />
+            <element signature="e#465#466#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/compare.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
+          <folding>
+            <element signature="e#14#10948#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/logo_1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="244" column="20" selection-start-line="244" selection-start-column="20" selection-end-line="244" selection-end-column="20" />
+          <folding>
+            <element signature="e#76#1947#0" />
+            <element signature="n#!!block;n#toPn#0" />
+            <element signature="n#!!block;n#quit#0" />
+            <element signature="n#!!block;n#over#0" />
+            <element signature="n#!!block;n#cart#0" />
+            <element signature="n#!!block;n#emptyItem#0" />
+            <element signature="n#!!block;n#toComp#0" />
+            <element signature="n#!!block;n#search#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/search.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2520">
+          <caret line="70" column="31" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="56" column="50" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="62" column="50" lean-forward="true" selection-start-line="62" selection-start-column="50" selection-end-line="62" selection-end-column="50" />
+          <folding>
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/admin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="170" column="30" lean-forward="true" selection-start-line="170" selection-start-column="30" selection-end-line="170" selection-end-column="30" />
+        <state relative-caret-position="632">
+          <caret line="183" column="23" selection-start-line="183" selection-start-column="23" selection-end-line="183" selection-end-column="23" />
           <folding>
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
@@ -1255,17 +1491,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/controller/TransactionController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="56" column="66" selection-start-line="56" selection-start-column="66" selection-end-line="56" selection-end-column="66" />
+        <state relative-caret-position="375">
+          <caret line="1116" column="1" lean-forward="true" selection-start-line="1116" selection-start-column="1" selection-end-line="1116" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="776">
+          <caret line="101" column="37" selection-start-line="101" selection-start-column="28" selection-end-line="101" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/admin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-542">
-          <caret line="514" column="69" selection-start-line="514" selection-start-column="57" selection-end-line="514" selection-end-column="69" />
+        <state relative-caret-position="489">
+          <caret line="867" column="23" selection-start-line="867" selection-start-column="23" selection-end-line="867" selection-end-column="23" />
           <folding>
             <element signature="e#57#645#0" />
             <element signature="e#678#1252#0" />
@@ -1282,47 +1525,31 @@
             <element signature="e#9857#13261#0" />
             <element signature="e#13290#14227#0" />
             <element signature="e#14262#15924#0" />
-            <element signature="e#16764#18038#0" />
-            <element signature="e#18073#19172#0" />
-            <element signature="e#19207#20375#0" />
-            <element signature="e#20405#20913#0" />
-            <element signature="e#24842#25533#0" />
-            <element signature="e#25570#26150#0" />
-            <element signature="e#26184#27329#0" />
-            <element signature="e#27366#27987#0" />
-            <element signature="e#28019#28575#0" />
-            <element signature="e#28608#34261#0" />
-            <element signature="e#34297#36008#0" />
-            <element signature="e#36044#36670#0" />
-            <element signature="e#36706#37818#0" />
-            <element signature="e#37851#38996#0" />
-            <element signature="e#39019#39104#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="1173" column="8" selection-start-line="1173" selection-start-column="1" selection-end-line="1173" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jf/crud/service/TransactionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-          <folding>
-            <element signature="e#403#404#0" expanded="true" />
-            <element signature="e#465#466#0" expanded="true" />
+            <element signature="e#15959#16779#0" />
+            <element signature="e#16814#18088#0" />
+            <element signature="e#18123#19222#0" />
+            <element signature="e#19257#20425#0" />
+            <element signature="e#20455#20963#0" />
+            <element signature="e#20994#24855#0" />
+            <element signature="e#24892#25583#0" />
+            <element signature="e#25620#26200#0" />
+            <element signature="e#26234#27379#0" />
+            <element signature="e#27416#28037#0" />
+            <element signature="e#28069#28625#0" />
+            <element signature="e#28658#34453#0" />
+            <element signature="e#34489#36200#0" />
+            <element signature="e#36236#36862#0" />
+            <element signature="e#36898#38010#0" />
+            <element signature="e#38043#39188#0" />
+            <element signature="e#39211#39296#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/seller.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="89" column="37" lean-forward="true" selection-start-line="89" selection-start-column="37" selection-end-line="89" selection-end-column="37" />
+        <state relative-caret-position="595">
+          <caret line="165" column="69" lean-forward="true" selection-start-line="165" selection-start-column="69" selection-end-line="165" selection-end-column="69" />
           <folding>
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
@@ -1330,20 +1557,69 @@
             <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#3;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#4;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#5;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#6;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#7;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#8;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#9;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/person.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="136" column="46" selection-start-line="136" selection-start-column="46" selection-end-line="136" selection-end-column="46" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#3;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#4;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#5;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#6;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/person.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="449" column="19" selection-start-line="449" selection-start-column="9" selection-end-line="449" selection-end-column="19" />
+          <folding>
+            <element signature="e#115#547#0" />
+            <element signature="n#!!block;n#toPerson#0" />
+            <element signature="n#!!block;n#getPerson#0" />
+            <element signature="n#!!block;n#modifyPer#0" />
+            <element signature="n#!!block;n#saveMod#0" />
+            <element signature="n#!!block;n#cancelMod#0" />
+            <element signature="n#!!block;n#addPer#0" />
+            <element signature="n#!!block;n#saveAdd#0" />
+            <element signature="n#!!block;n#resetAdd#0" />
+            <element signature="n#!!block;n#disClick#0" />
+            <element signature="n#!!block;n#toOrder#0" />
+            <element signature="n#!!block;n#getOrder#0" />
+            <element signature="n#!!block;n#deleteOrder#0" />
+            <element signature="n#!!block;n#getComment#0" />
+            <element signature="n#!!block;n#modifyComm#0" />
+            <element signature="n#!!block;n#savemodifyComm#0" />
+            <element signature="n#!!block;n#toComment#0" />
+            <element signature="n#!!block;n#addComm#0" />
+            <element signature="n#!!block;n#saveComm#0" />
+            <element signature="e#15647#16156#0" />
+            <element signature="n#!!block;n#cancelComm#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/seller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="552" column="74" selection-start-line="552" selection-start-column="74" selection-end-line="552" selection-end-column="74" />
+        <state relative-caret-position="452">
+          <caret line="646" column="26" selection-start-line="646" selection-start-column="26" selection-end-line="646" selection-end-column="26" />
           <folding>
             <element signature="e#130#924#0" />
             <element signature="n#!!block;n#toPerson#0" />
@@ -1364,104 +1640,17 @@
             <element signature="n#!!block;n#cancelPro#0" />
             <element signature="n#!!block;n#saveModPro#0" />
             <element signature="n#!!block;n#toOrder#0" />
+            <element signature="n#!!block;n#getOrder#0" />
             <element signature="n#!!block;n#deleteOrder#0" />
+            <element signature="n#!!block;n#getComment#0" />
             <element signature="n#!!block;n#toComment#0" />
             <element signature="n#!!block;n#addComm#0" />
+            <element signature="n#!!block;n#deleteComm#0" />
             <element signature="n#!!block;n#modifyComm#0" />
+            <element signature="n#!!block;n#savemodifyComm#0" />
             <element signature="n#!!block;n#saveComm#0" />
             <element signature="n#!!block;n#cancelComm#0" />
             <element signature="n#!!block;n#quit#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/person.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="311" column="74" selection-start-line="311" selection-start-column="74" selection-end-line="311" selection-end-column="74" />
-          <folding>
-            <element signature="e#115#547#0" />
-            <element signature="n#!!block;n#toPerson#0" />
-            <element signature="n#!!block;n#getPerson#0" />
-            <element signature="n#!!block;n#modifyPer#0" />
-            <element signature="n#!!block;n#saveMod#0" />
-            <element signature="n#!!block;n#cancelMod#0" />
-            <element signature="n#!!block;n#addPer#0" />
-            <element signature="n#!!block;n#saveAdd#0" />
-            <element signature="n#!!block;n#resetAdd#0" />
-            <element signature="n#!!block;n#disClick#0" />
-            <element signature="n#!!block;n#toOrder#0" />
-            <element signature="n#!!block;n#deleteOrder#0" />
-            <element signature="n#!!block;n#toComment#0" />
-            <element signature="n#!!block;n#addComm#0" />
-            <element signature="n#!!block;n#saveComm#0" />
-            <element signature="n#!!block;n#cancelComm#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/person.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="118" column="38" selection-start-line="118" selection-start-column="38" selection-end-line="118" selection-end-column="38" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#3;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#4;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#5;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/compare.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14" selection-start-column="14" selection-end-column="14" />
-          <folding>
-            <element signature="e#14#10948#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/search.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="102" column="40" selection-start-line="102" selection-start-column="28" selection-end-line="102" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="101" column="37" selection-start-line="101" selection-start-column="28" selection-end-line="101" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/search.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2504">
-          <caret line="79" column="32" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="951">
-          <caret line="243" column="77" lean-forward="true" selection-start-line="243" selection-start-column="77" selection-end-line="243" selection-end-column="77" />
-          <folding>
-            <element signature="e#76#1947#0" />
-            <element signature="n#!!block;n#toPn#0" />
-            <element signature="n#!!block;n#quit#0" />
-            <element signature="n#!!block;n#over#0" />
-            <element signature="n#!!block;n#cart#0" />
-            <element signature="n#!!block;n#emptyItem#0" />
-            <element signature="n#!!block;n#toComp#0" />
-            <element signature="n#!!block;n#search#0" />
           </folding>
         </state>
       </provider>

@@ -52,7 +52,7 @@
         <div class="container">
             <div class="row clearfix">
                 <div class="col-md-2 column logo">
-                    <a href="index.html"><img alt="logo" src="img/logo_1.png" title="首页" /></a>
+                    <a href="index.html"><img alt="logo" src="img/logo.png" title="首页" /></a>
                 </div>
             </div>
         </div>
@@ -117,10 +117,8 @@
                         <button class="btn btn-default" onclick="cancelMod()">取消</button>
                     </div>
                     <div class="order">
-                        <h1>我的订单</h1>
                     </div>
                     <div class="comment">
-                        <h1>评价晒单</h1>
                     </div>
                     <div class="addComment">
                         <h1>发表评价</h1>
@@ -132,6 +130,20 @@
                                 <div class="comment-answer-btn">
                                     <button class="btn btn-primary" onclick="saveComm(this)">发表评价</button>
                                     <button class="btn btn-default" onclick="cancelComm()">暂不评价</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modifyComment">
+                        <h1>修改评价</h1>
+                        <div class="row clearfix">
+                            <div class="col-md-4 column commentPro">
+                            </div>
+                            <div class="col-md-8 column commentInfo">
+                                <textarea id="commentContent1" name="" class="goods-comment-content"></textarea>
+                                <div class="comment-answer-btn">
+                                    <button class="btn btn-primary" onclick="savemodifyComm(this)">保存</button>
+                                    <button class="btn btn-default" onclick="cancelComm()">取消</button>
                                 </div>
                             </div>
                         </div>
